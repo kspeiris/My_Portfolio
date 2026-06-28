@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
@@ -34,6 +35,14 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -119,7 +128,9 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1))",
+        "hero-gradient": "linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)",
+        "btn-gradient": "linear-gradient(135deg, #2563EB, #06B6D4)",
+        "hover-gradient": "linear-gradient(135deg, #7C3AED, #06B6D4)",
         "card-gradient": "linear-gradient(135deg, hsl(var(--card)), hsl(var(--secondary)))",
       },
     },

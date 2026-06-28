@@ -58,7 +58,7 @@ export const ContactSection = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you.
+            Interested in Software Engineering, AI, Machine Learning, Cybersecurity, or research collaboration? Let's connect and build impactful solutions together.
           </p>
         </motion.div>
 
