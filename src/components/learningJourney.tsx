@@ -165,8 +165,8 @@ return ( <section
           className={`relative overflow-hidden rounded-xl border transition-all duration-300
           ${
             preparing
-              ? "border-yellow-500/20 bg-yellow-500/5 hover:border-yellow-400/40"
-              : "border-emerald-500/20 bg-emerald-500/5 hover:border-emerald-400/40"
+              ? "border-warning/20 bg-warning/5 hover:border-warning/40"
+              : "border-success/20 bg-success/5 hover:border-success/40"
           }`}
         >
           {/* Left Accent */}
@@ -174,8 +174,8 @@ return ( <section
             className={`absolute left-0 top-0 h-full w-1
             ${
               preparing
-                ? "bg-yellow-400"
-                : "bg-emerald-400"
+                ? "bg-warning"
+                : "bg-success"
             }`}
           />
 
@@ -187,16 +187,16 @@ return ( <section
                 className={`w-8 h-8 rounded-lg flex items-center justify-center
                 ${
                   preparing
-                    ? "bg-yellow-500/10"
-                    : "bg-emerald-500/10"
+                    ? "bg-warning/10"
+                    : "bg-success/10"
                 }`}
               >
                 <Award
                   className={`w-4 h-4
                   ${
                     preparing
-                      ? "text-yellow-400"
-                      : "text-emerald-400"
+                      ? "text-warning"
+                      : "text-success"
                   }`}
                 />
               </div>
@@ -225,8 +225,8 @@ return ( <section
               className={`text-[10px] font-medium px-2.5 py-1 rounded-full
               ${
                 preparing
-                  ? "bg-yellow-500/10 text-yellow-300"
-                  : "bg-emerald-500/10 text-emerald-300"
+                  ? "bg-warning/10 text-warning"
+                  : "bg-success/10 text-success"
               }`}
             >
               {preparing ? "Ongoing" : "Verified"}
@@ -319,9 +319,9 @@ return ( <section
               </p>
             </div>
 
-            <span className="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300">
-              Completed
-            </span>
+<span className="text-[10px] px-2 py-1 rounded-full bg-success/10 text-success">
+               Completed
+             </span>
 
           </div>
 

@@ -148,7 +148,7 @@ export const HeroSection = () => {
                 transition={{ delay: 0.6, type: "spring" }}
                 className="absolute bottom-4 right-4 bg-card/90 backdrop-blur border border-border rounded-full px-4 py-2 flex items-center gap-2"
               >
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
                 <span className="text-sm font-medium">Available</span>
               </motion.div>
             </div>
@@ -162,7 +162,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
             >
-              Hi, I'm <span className="gradient-text">Eranga Kavisanka</span>
+              Hi, I'm <span className="gradient-text">Kavindu Peiris</span>
             </motion.h1>
 
             {/* Role Typewriter */}

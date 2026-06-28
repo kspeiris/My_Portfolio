@@ -82,7 +82,7 @@ export const BlogsSection = () => {
             >
               <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
                 {/* Image */}
-        <div className="relative bg-[#080b17] p-4">
+        <div className="relative bg-card p-4">
   <div className="overflow-hidden rounded-xl border border-primary/20">
     <img
       src={blog.image}
