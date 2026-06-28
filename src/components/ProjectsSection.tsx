@@ -14,9 +14,9 @@ const projects = [
   {
     title: "CoordBotLab Guard",
     description:
-      "AI-driven bot detection and prevention system using behavioral analysis and machine learning to safeguard collaborative platforms.",
+      "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection. Real-time cybersecurity framework detecting coordinated bots through behavioural fingerprinting, similarity analysis, and lightweight machine learning (Random Forest, XGBoost, Decision Trees). Features real-time monitoring dashboard and privacy-preserving behavioural analysis.",
     image: projectExclusive,
-    tags: ["Python", "TensorFlow", "Deep Learning", "Bot Detection", "Behavioral Analysis"],
+    tags: ["Python", "Scikit-learn", "Machine Learning", "Cybersecurity", "Behavioral Fingerprinting", "Node.js", "React"],
     liveUrl: "#",
     githubUrl: "#",
   },

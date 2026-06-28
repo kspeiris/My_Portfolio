@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Shield, Lock, Network } from "lucide-react";
+import { Brain, Shield, Lock, Network, Activity, BarChart3, GitBranch } from "lucide-react";
 
 const currentResearch = [
   {
     title: "CoordBotLab Guard",
+    subtitle: "Final Year Research Project",
     description:
-      "AI-driven bot detection and prevention system using behavioral analysis and machine learning to safeguard collaborative platforms.",
-    tags: ["Bot Detection", "Behavioral Analysis", "AI Security"],
+      "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection. The framework combines behavioural biometrics, behavioural fingerprinting, coordination-aware similarity analysis, and lightweight machine learning to identify both individual and coordinated bot activities while maintaining low computational overhead and preserving user privacy.",
+    tags: ["Bot Detection", "Behavioral Fingerprinting", "Cybersecurity", "Machine Learning", "Real-Time Detection"],
   },
 ];
 
@@ -16,8 +17,9 @@ const researchInterests = [
   "AI-assisted Cybersecurity",
   "Behavioral Analysis",
   "Machine Learning",
-  "Explainable AI",
   "Bot Detection",
+  "Behavioral Fingerprinting",
+  "Coordination-Aware Detection",
 ];
 
 const futureResearch = [
@@ -75,7 +77,8 @@ const ResearchSection = () => {
                   className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors"
                 >
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-primary" />
-                  <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+                  <h4 className="text-lg font-bold mb-1">{item.title}</h4>
+                  <p className="text-xs text-primary font-medium mb-2">{item.subtitle}</p>
                   <p className="text-muted-foreground mb-3">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
@@ -145,6 +148,33 @@ const ResearchSection = () => {
                   </span>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
+                <Activity className="w-6 h-6 text-accent" />
+                Research Focus Areas
+              </h3>
+              <div className="space-y-3">
+                {[
+                  "Behavioural Fingerprinting",
+                  "Coordination-Aware Bot Detection",
+                  "Lightweight ML for Real-Time Detection",
+                  "Privacy-Preserving Analysis",
+                ].map((focus, index) => (
+                  <motion.div
+                    key={focus}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-card/50 border border-border hover:border-accent/50 transition-colors"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-accent" />
+                    <span className="font-medium">{focus}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
