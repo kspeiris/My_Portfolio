@@ -7,15 +7,17 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Resume", href: "#resume" },
+  { name: "About", href: "#services" },
+  { name: "Research", href: "#research" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#resume" },
+  { name: "Leadership", href: "#leadership" },
   { name: "Blogs", href: "#blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
-const CV_PATH = "/cv.pdf"; // ✅ file inside /public
+const CV_PATH = "/cv.pdf";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +66,6 @@ export const Navbar = () => {
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
             <motion.a
               href="#home"
               onClick={(e) => {
@@ -78,7 +79,6 @@ export const Navbar = () => {
               {"<kspeiris />"}
             </motion.a>
 
-            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
               {navItems.map((item, index) => (
                 <motion.a
@@ -102,7 +102,6 @@ export const Navbar = () => {
               ))}
             </div>
 
-            {/* ✅ Desktop Download CV */}
             <div className="hidden lg:block">
               <Button asChild variant="hero" size="default" className="gap-2">
                 <a href={CV_PATH} download>
@@ -112,7 +111,6 @@ export const Navbar = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
@@ -128,7 +126,6 @@ export const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -172,7 +169,6 @@ export const Navbar = () => {
                 ))}
               </div>
 
-              {/* ✅ Mobile Download CV */}
               <div className="mt-6">
                 <Button asChild variant="hero" size="lg" className="w-full gap-2">
                   <a href={CV_PATH} download onClick={() => setIsMobileMenuOpen(false)}>

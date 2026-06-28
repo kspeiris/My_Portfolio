@@ -2,31 +2,27 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ExternalLink, Mail } from "lucide-react";
+import { ArrowDown, ExternalLink, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-/* Floating tech icons */
 const floatingIcons = [
-  { icon: "⚛️", delay: 0, x: "10%", y: "20%" },
-  { icon: "🐳", delay: 0.5, x: "80%", y: "15%" },
-  { icon: "☁️", delay: 1, x: "15%", y: "70%" },
-  { icon: "🚀", delay: 1.5, x: "85%", y: "65%" },
-  { icon: "💻", delay: 2, x: "5%", y: "45%" },
-  { icon: "🔧", delay: 2.5, x: "90%", y: "40%" },
+  { icon: "💻", delay: 0, x: "10%", y: "20%" },
+  { icon: "🤖", delay: 0.5, x: "80%", y: "15%" },
+  { icon: "🧠", delay: 1, x: "15%", y: "70%" },
+  { icon: "🔐", delay: 1.5, x: "85%", y: "65%" },
+  { icon: "📊", delay: 2, x: "5%", y: "45%" },
+  { icon: "⚡", delay: 2.5, x: "90%", y: "40%" },
+  { icon: "📡", delay: 3, x: "50%", y: "10%" },
+  { icon: "🛡️", delay: 3.5, x: "45%", y: "85%" },
 ];
 
-/* Roles for typewriter */
 const roles = [
-  "DevOps Engineer",
-  "Cloud Engineer",
-  "Site Reliability Engineer",
-  "Researcher",
-  "AWS Certified Cloud Practitioner",
-  "Kubernetes Enthusiast",
-  "Open Source Contributor",
+  "Software Engineering Undergraduate",
+  "AI & Machine Learning Researcher",
+  "Cybersecurity Enthusiast",
+  "Backend Developer",
 ];
 
-/* ===== Typewriter Hook ===== */
 function useTypewriter(
   words: string[],
   opts?: { typeSpeed?: number; deleteSpeed?: number; holdMs?: number }
@@ -85,13 +81,11 @@ export const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent" />
       </div>
 
-      {/* Floating Icons */}
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
@@ -109,12 +103,10 @@ export const HeroSection = () => {
         </motion.div>
       ))}
 
-      {/* Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
-          {/* ===== PROFILE IMAGE ===== */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -133,7 +125,7 @@ export const HeroSection = () => {
               <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-primary/50 shadow-2xl shadow-primary/30">
                 <motion.img
                   src="/profileImage.jpg"
-                  alt="Eranga Kavishanka"
+                  alt="Kavindu Peiris"
                   initial={{ scale: 1.25 }}
                   animate={{ scale: 1.35 }}
                   whileHover={{ scale: 1.45 }}
@@ -154,7 +146,6 @@ export const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* ===== CONTENT ===== */}
           <div className="flex-1 text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -165,31 +156,26 @@ export const HeroSection = () => {
               Hi, I'm <span className="gradient-text">Kavindu Peiris</span>
             </motion.h1>
 
-            {/* Role Typewriter */}
-<motion.div
-  initial={{ opacity: 0, y: 14 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.2 }}
-  className="text-lg md:text-xl text-primary font-medium mb-4"
->
-  <span className="relative inline-flex items-center leading-none h-[1.6em]">
-    {/* keeps width stable */}
-    <span className="invisible whitespace-nowrap">{placeholder}</span>
-
-    {/* typed text sits on the same baseline */}
-    <span className="absolute left-0 top-0 inline-flex items-center whitespace-nowrap leading-none">
-      <span>{roleText}</span>
-      <motion.span
-        className="ml-1 inline-block leading-none"
-        animate={{ opacity: [0, 1, 0] }}
-        transition={{ duration: 1, repeat: Infinity }}
-      >
-        |
-      </motion.span>
-    </span>
-  </span>
-</motion.div>
-
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-primary font-medium mb-4"
+            >
+              <span className="relative inline-flex items-center leading-none h-[1.6em]">
+                <span className="invisible whitespace-nowrap">{placeholder}</span>
+                <span className="absolute left-0 top-0 inline-flex items-center whitespace-nowrap leading-none">
+                  <span>{roleText}</span>
+                  <motion.span
+                    className="ml-1 inline-block leading-none"
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                  >
+                    |
+                  </motion.span>
+                </span>
+              </span>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -197,11 +183,10 @@ export const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-muted-foreground text-lg max-w-2xl mb-8"
             >
-              A passionate Software Engineering undergraduate building scalable,
-              secure, and impactful systems.
+              Building secure, intelligent software systems through Software Engineering,
+              Artificial Intelligence, Machine Learning, and Cybersecurity research.
             </motion.p>
 
-            {/* Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -210,6 +195,15 @@ export const HeroSection = () => {
             >
               <Button
                 variant="hero"
+                size="xl"
+                onClick={() => scrollToSection("#research")}
+                className="gap-2"
+              >
+                Explore My Research <ExternalLink className="w-5 h-5" />
+              </Button>
+
+              <Button
+                variant="heroOutline"
                 size="xl"
                 onClick={() => scrollToSection("#projects")}
                 className="gap-2"
@@ -220,15 +214,14 @@ export const HeroSection = () => {
               <Button
                 variant="heroOutline"
                 size="xl"
-                onClick={() => scrollToSection("#contact")}
+                onClick={() => window.open("/cv.pdf", "_blank")}
                 className="gap-2"
               >
-                <Mail className="w-5 h-5" />
-                Contact Me
+                <Download className="w-5 h-5" />
+                Download CV
               </Button>
             </motion.div>
 
-            {/* ✅ STATS SECTION (RESTORED) */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -242,8 +235,6 @@ export const HeroSection = () => {
                 </div>
               </div>
 
-            
-
               <div className="text-center">
                 <div className="text-4xl font-bold gradient-text">10+</div>
                 <div className="text-sm text-muted-foreground mt-1">
@@ -255,7 +246,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

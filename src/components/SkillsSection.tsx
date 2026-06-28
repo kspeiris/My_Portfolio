@@ -1,127 +1,112 @@
 import { motion } from "framer-motion";
 
 import {
-  SiDocker,
-  SiMongodb,
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiLaravel,
+  SiFlutter,
+  SiDjango,
+  SiTensorflow,
   SiMysql,
-  SiGithub,
-  SiGithubactions,
+  SiMongodb,
+  SiFirebase,
+  SiPython,
   SiJavascript,
   SiTypescript,
-  SiLinux,
-  SiJenkins,
-  SiApachemaven,
-  SiPostman,
-  SiGit,
-  SiKubernetes,
-  SiTerraform,
-  SiNginx,
-  SiPython,
 } from "react-icons/si";
 
-import { FaJava, FaAws } from "react-icons/fa";
+import { FaJava, FaPhp, FaDatabase } from "react-icons/fa";
 
 import {
-  Workflow,
-  ShieldCheck,
-  Boxes,
-  Server,
-  Activity,
-  BarChart3,
+  Brain,
+  Shield,
+  Code2,
+  Cpu,
+  Network,
+  Lock,
+  GitBranch,
+  BookOpen,
+  FlaskConical,
+  Zap,
 } from "lucide-react";
 
-
 const skills = [
-  { name: "AWS", icon: FaAws, color: "from-orange-500 to-yellow-500" },
-  { name: "Docker", icon: SiDocker, color: "from-blue-500 to-cyan-500" },
-  { name: "Kubernetes", icon: SiKubernetes, color: "from-blue-600 to-blue-400" },
-  { name: "Terraform", icon: SiTerraform, color: "from-purple-600 to-indigo-500" },
-
-  { name: "ArgoCD", icon: Workflow, color: "from-blue-500 to-cyan-500" },
-  { name: "GitOps", icon: SiGit, color: "from-orange-500 to-red-500" },
-
-  { name: "Linux", icon: SiLinux, color: "from-yellow-600 to-yellow-400" },
-
-  { name: "GitHub Actions", icon: SiGithubactions, color: "from-blue-600 to-blue-400" },
-
-  { name: "Jenkins", icon: SiJenkins, color: "from-red-600 to-red-400" },
-
-  { name: "SonarQube", icon: ShieldCheck, color: "from-blue-500 to-cyan-500" },
-
-  { name: "Helm", icon: Boxes, color: "from-indigo-500 to-blue-500" },
-
-  { name: "Ansible", icon: Server, color: "from-red-500 to-pink-500" },
-
-  { name: "Nginx", icon: SiNginx, color: "from-green-600 to-green-400" },
-
-  { name: "Prometheus", icon: Activity, color: "from-orange-500 to-yellow-500" },
-
-  { name: "Grafana", icon: BarChart3, color: "from-orange-500 to-red-500" },
-
-  { name: "AWS EKS", icon: SiKubernetes, color: "from-blue-600 to-blue-400" },
-
   { name: "Java", icon: FaJava, color: "from-red-500 to-orange-500" },
-
   { name: "Python", icon: SiPython, color: "from-yellow-500 to-blue-500" },
-];
-const cloudSkills = [
-  "AWS",
-  "GCP",
-  "Multi-Cloud",
-  "EC2",
-  "S3",
-  "IAM",
-  "VPC",
-  "Load Balancer",
-  "Route 53",
-  "Cloud Architecture",
-];
-
-const devopsSkills = [
-  "Docker",
-  "Kubernetes",
-  "Helm",
-  "ArgoCD",
-  "GitOps",
-  "Terraform",
-  "Ansible",
-  "Jenkins",
-  "GitHub Actions",
-  "CI/CD",
+  { name: "JavaScript", icon: SiJavascript, color: "from-yellow-400 to-yellow-600" },
+  { name: "TypeScript", icon: SiTypescript, color: "from-blue-600 to-blue-400" },
+  { name: "PHP", icon: FaPhp, color: "from-indigo-500 to-purple-500" },
+  { name: "SQL", icon: FaDatabase, color: "from-blue-500 to-cyan-500" },
+  { name: "React", icon: SiReact, color: "from-cyan-400 to-blue-500" },
+  { name: "Node.js", icon: SiNodedotjs, color: "from-green-500 to-green-700" },
+  { name: "Express", icon: SiExpress, color: "from-gray-600 to-gray-800" },
+  { name: "Laravel", icon: SiLaravel, color: "from-red-500 to-pink-500" },
+  { name: "Flutter", icon: SiFlutter, color: "from-cyan-400 to-blue-500" },
+  { name: "Django", icon: SiDjango, color: "from-green-700 to-green-500" },
+  { name: "TensorFlow", icon: SiTensorflow, color: "from-orange-500 to-yellow-500" },
+  { name: "MySQL", icon: SiMysql, color: "from-blue-600 to-blue-400" },
+  { name: "MongoDB", icon: SiMongodb, color: "from-green-500 to-green-700" },
+  { name: "Firebase", icon: SiFirebase, color: "from-orange-500 to-yellow-500" },
 ];
 
-const sreSkills = [
-  "Linux",
-  "Bash Scripting",
-  "Nginx",
-  "Prometheus",
-  "Grafana",
-  "Monitoring",
-  "Observability",
-  "Reliability Engineering",
-  "Incident Management",
-];
-
-const programmingSkills = [
+const languageSkills = [
   "Java",
   "Python",
   "JavaScript",
   "TypeScript",
+  "PHP",
+  "Dart",
   "SQL",
 ];
 
-const researchSkills = [
-  "Software Engineering Research",
-  "Technical Writing",
-  "Academic Publishing",
-  "IoT Systems",
-  "RF Communication",
-  "Research Methodology",
+const frameworkSkills = [
+  "React",
+  "Node.js",
+  "Express",
+  "Laravel",
+  "Flutter",
+  "FastAPI",
+  "Django",
+  "TensorFlow",
+  "Scikit-learn",
 ];
 
+const databaseSkills = [
+  "MySQL",
+  "MongoDB",
+  "Firebase",
+];
 
-const tools = [ "Git", "GitHub", "VS Code", "IntelliJ IDEA", "Postman", "Maven", ];
+const aiSkills = [
+  "Machine Learning",
+  "Deep Learning",
+  "CNN",
+  "Transfer Learning",
+  "NLP",
+  "TensorFlow",
+  "Scikit Learn",
+];
 
+const securitySkills = [
+  "Behavior Analysis",
+  "Bot Detection",
+  "Authentication",
+  "Authorization",
+  "Privacy",
+  "Threat Detection",
+];
+
+const engineeringSkills = [
+  "OOP",
+  "UML",
+  "Design Patterns",
+  "System Design",
+  "REST APIs",
+  "MVC",
+  "Software Testing",
+  "Git",
+];
 
 export const SkillsSection = () => {
   const renderSkillBadges = (items: string[], color: string) => (
@@ -145,7 +130,6 @@ export const SkillsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +138,7 @@ export const SkillsSection = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Cloud • DevOps • SRE • Research
+            AI • ML • Cybersecurity • Software Engineering
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -162,13 +146,11 @@ export const SkillsSection = () => {
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Specialized in Cloud Computing, DevOps, Kubernetes,
-            Infrastructure as Code, Site Reliability Engineering,
-            Open Source, and Software Engineering Research.
+            Proficient in Software Engineering, Artificial Intelligence, Machine Learning,
+            Cybersecurity, and modern backend development frameworks.
           </p>
         </motion.div>
 
-        {/* Main Skills Grid */}
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
           {skills.map((skill, index) => (
             <motion.div
@@ -205,7 +187,6 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
@@ -213,57 +194,57 @@ export const SkillsSection = () => {
               Programming Languages
             </h4>
             {renderSkillBadges(
-              programmingSkills,
+              languageSkills,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              Cloud Platforms
+              Frameworks
             </h4>
             {renderSkillBadges(
-              cloudSkills,
+              frameworkSkills,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-primary">
-              DevOps & Automation
+              Databases
             </h4>
             {renderSkillBadges(
-              devopsSkills,
+              databaseSkills,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              Site Reliability Engineering
+              AI & Machine Learning
             </h4>
             {renderSkillBadges(
-              sreSkills,
+              aiSkills,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-primary">
-              Development Tools
+              Cybersecurity
             </h4>
             {renderSkillBadges(
-              tools,
+              securitySkills,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              Research & Publications
+              Software Engineering
             </h4>
             {renderSkillBadges(
-              researchSkills,
+              engineeringSkills,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>
@@ -273,4 +254,3 @@ export const SkillsSection = () => {
     </section>
   );
 };
-

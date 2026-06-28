@@ -4,7 +4,8 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 const footerLinks = {
   navigation: [
     { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
+    { name: "About", href: "#services" },
+    { name: "Research", href: "#research" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ],
@@ -12,6 +13,7 @@ const footerLinks = {
     { name: "Blog", href: "#blogs" },
     { name: "Resume", href: "#resume" },
     { name: "Skills", href: "#skills" },
+    { name: "Leadership", href: "#leadership" },
   ],
 };
 
@@ -33,7 +35,6 @@ export const Footer = () => {
     <footer className="relative bg-card/50 border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
           <div className="lg:col-span-2">
             <motion.a
               href="#home"
@@ -44,11 +45,11 @@ export const Footer = () => {
               className="text-2xl font-bold gradient-text inline-block mb-4"
               whileHover={{ scale: 1.05 }}
             >
-              {"<eranga />"}
+              {"<kspeiris />"}
             </motion.a>
             <p className="text-muted-foreground max-w-md mb-6">
-              Building scalable, secure, and impactful digital solutions.
-              Let's create something amazing together.
+              Building secure, intelligent software systems through Software Engineering,
+              Artificial Intelligence, Machine Learning, and Cybersecurity research.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -66,7 +67,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
           <div>
             <h4 className="font-semibold mb-4">Navigation</h4>
             <ul className="space-y-3">
@@ -87,7 +87,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-3">
@@ -109,13 +108,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Eranga Kavisanka. All rights reserved.
+            &copy; {new Date().getFullYear()} Kavindu Peiris. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
-            Designed & Built by Eranga Kavisanka
+            Designed & Built by Kavindu Peiris
           </p>
         </div>
       </div>

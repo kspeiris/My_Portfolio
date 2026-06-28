@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Award } from "lucide-react";
-
+import { Briefcase, GraduationCap, Award, FlaskConical } from "lucide-react";
 
 const experience = [
   {
@@ -10,7 +9,7 @@ const experience = [
     achievements: [
       "Contributed to open-source software projects and community initiatives",
       "Worked with Git-based collaboration workflows and modern software development practices",
-      "Strengthened expertise in cloud-native technologies and software engineering",
+      "Strengthened expertise in software engineering and backend development",
     ],
   },
 
@@ -31,13 +30,11 @@ const experience = [
     duration: "2024 - Present",
     achievements: [
       "Collaborating on software solutions and technical projects for real-world clients",
-      "Participating in cloud deployment, automation, and modern development practices",
+      "Participating in software development, system design, and collaborative coding practices",
       "Managing project planning and technical decision-making activities",
     ],
   },
 ];
-
-
 
 const education = [
   {
@@ -72,27 +69,48 @@ const education = [
   },
 ];
 
-
-
-
-const certifications = [
-  "AWS Certified Cloud Practitioner",
-  "Aviatrix Certified Multicloud Associate",
-  "AWS Solutions Architect Associate (Ongoing)",
-  "KCNA - Kubernetes and Cloud Native Associate (Ongoing)",
-  "Advanced DevOps Master Course - Imran Teli",
-  "Full Stack Web Development - Skyrek",
+const researchJourney = [
+  {
+    title: "CoordBotLab Guard",
+    institution: "AI & Cybersecurity Research",
+    year: "2026",
+    description:
+      "Developing an AI-driven bot detection and prevention system using behavioral analysis and machine learning.",
+  },
+  {
+    title: "Bot Detection Research",
+    institution: "Independent Research",
+    year: "2026",
+    description:
+      "Published research at JCoS 2026 on RF-based communication systems and IoT integration approaches.",
+  },
+  {
+    title: "AI Projects",
+    institution: "Software Engineering",
+    year: "2025",
+    description:
+      "Built multiple AI/ML systems including disease classification, NLP-based text-to-speech, and weather prediction.",
+  },
+  {
+    title: "Software Engineering Projects",
+    institution: "University & Self-Learning",
+    year: "2024",
+    description:
+      "Full-stack MERN, Laravel, and Flutter applications focusing on clean architecture and scalable backend design.",
+  },
 ];
 
+const certifications = [
+  "Full Stack Web Development - Skyrek",
+  "Advanced DevOps Master Course - Imran Teli",
+];
 
 export const ResumeSection = () => {
   return (
     <section id="resume" className="py-20 lg:py-32 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,59 +125,56 @@ export const ResumeSection = () => {
             <span className="gradient-text">Resume</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A snapshot of my professional experience and educational background.
+            A snapshot of my professional experience, research work, and educational background.
           </p>
         </motion.div>
 
-        {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Experience Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 lg:p-8"
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-primary-foreground" />
+        <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 lg:p-8"
+            >
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                  <Briefcase className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold">Work Experience</h3>
               </div>
-              <h3 className="text-2xl font-bold">Work Experience</h3>
-            </div>
 
-            <div className="space-y-6">
-              {experience.map((job, index) => (
-                <motion.div
-                  key={job.company}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors group"
-                >
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-primary group-hover:bg-primary transition-colors" />
-                  
-                  <div className="mb-2">
-                    <span className="text-sm text-primary font-medium">{job.duration}</span>
-                  </div>
-                  <h4 className="text-lg font-bold mb-1">{job.role}</h4>
-                  <p className="text-muted-foreground mb-3">{job.company}</p>
-                  <ul className="space-y-2">
-                    {job.achievements.map((achievement, i) => (
-                      <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+              <div className="space-y-6">
+                {experience.map((job, index) => (
+                  <motion.div
+                    key={job.company}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors group"
+                  >
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-primary group-hover:bg-primary transition-colors" />
 
-          {/* Education Column */}
-          <div className="space-y-8">
+                    <div className="mb-2">
+                      <span className="text-sm text-primary font-medium">{job.duration}</span>
+                    </div>
+                    <h4 className="text-lg font-bold mb-1">{job.role}</h4>
+                    <p className="text-muted-foreground mb-3">{job.company}</p>
+                    <ul className="space-y-2">
+                      {job.achievements.map((achievement, i) => (
+                        <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -185,7 +200,7 @@ export const ResumeSection = () => {
                     className="relative pl-6 border-l-2 border-accent/30 hover:border-accent transition-colors group"
                   >
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-accent group-hover:bg-accent transition-colors" />
-                    
+
                     <div className="mb-2">
                       <span className="text-sm text-accent font-medium">{edu.year}</span>
                     </div>
@@ -205,33 +220,69 @@ export const ResumeSection = () => {
                 ))}
               </div>
             </motion.div>
-
-            {/* Certifications */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
-                  <Award className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold">Certifications</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {certifications.map((cert, i) => (
-                  <span
-                    key={i}
-                    className="text-xs px-3 py-2 bg-primary/10 text-primary rounded-lg border border-primary/20"
-                  >
-                    {cert}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 lg:p-8"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                <FlaskConical className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-bold">Research Journey</h3>
+            </div>
+
+            <div className="space-y-6">
+              {researchJourney.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative pl-6 border-l-2 border-primary/30 hover:border-primary transition-colors group"
+                >
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-primary group-hover:bg-primary transition-colors" />
+
+                  <div className="mb-2">
+                    <span className="text-sm text-primary font-medium">{item.year}</span>
+                    <span className="text-sm text-muted-foreground ml-2">— {item.institution}</span>
+                  </div>
+                  <h4 className="text-lg font-bold mb-1">{item.title}</h4>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                <Award className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-bold">Certifications</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {certifications.map((cert, i) => (
+                <span
+                  key={i}
+                  className="text-xs px-3 py-2 bg-primary/10 text-primary rounded-lg border border-primary/20"
+                >
+                  {cert}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
