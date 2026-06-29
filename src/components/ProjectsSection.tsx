@@ -54,7 +54,7 @@ const projects = [
     image: projectCrystalBeauty,
     tags: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
     liveUrl: "https://crystal-beauty.netlify.app/",
-    githubUrl: "https://github.com/Eranga035225/cbc-frontend.git",
+    githubUrl: "https://github.com/kspeiris/cbc-frontend.git",
   },
   {
     title: "MediLink – E-Channeling System",
@@ -72,7 +72,7 @@ const projects = [
     image: projectSekinExpress,
     tags: ["Laravel", "PHP", "MySQL", "REST APIs", "Bootstrap"],
     liveUrl: "https://www.sekinexpress.com/",
-    githubUrl: "https://github.com/Eranga035225/webSystem-for-a-delivery-service.git",
+    githubUrl: "https://github.com/kspeiris/webSystem-for-a-delivery-service.git",
   },
   {
     title: "Skill Finder – Mobile App",
@@ -190,7 +190,7 @@ export const ProjectsSection = () => {
         >
           <Button variant="heroOutline" size="lg" asChild>
             <a
-              href="https://github.com/Eranga035225"
+              href="https://github.com/kspeiris"
               target="_blank"
               rel="noopener noreferrer"
             >

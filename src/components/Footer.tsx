@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = {
   navigation: [
@@ -18,9 +18,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Github, url: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, url: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, url: "https://twitter.com", label: "Twitter" },
+  { icon: Github, url: "https://github.com/kspeiris", label: "GitHub" },
+  { icon: Linkedin, url: "https://www.linkedin.com/in/kavindu-peiris-149375297", label: "LinkedIn" },
+  { icon: Mail, url: "mailto:kavindup52@gmail.com", label: "Email" },
 ];
 
 export const Footer = () => {
