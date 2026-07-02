@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import projectCrystalBeauty from "@/assets/project-crystal-beauty.jpg";
 import projectSekinExpress from "@/assets/project-sekin-express.jpg";
 import projectMedilink from "@/assets/project-medilink.jpg";
@@ -10,6 +17,19 @@ import projectWeatherPrediction from "@/assets/project-weather-prediction.jpg";
 import projectSkillFinder from "@/assets/project-skill-finder.jpg";
 import projectExclusive from "@/assets/project-exclusive.jpg";
 
+// Helper to extract YouTube embed URL with autoplay
+const getYoutubeEmbedUrl = (url: string) => {
+  if (!url) return "";
+  const regExp =
+    /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const match = url.match(regExp);
+  const videoId = match && match[2].length === 11 ? match[2] : null;
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  }
+  return url; // fallback (if already an embed URL)
+};
+
 const projects = [
   {
     title: "CoordBotLab Guard",
@@ -17,8 +37,8 @@ const projects = [
       "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection. Real-time cybersecurity framework detecting coordinated bots through behavioural fingerprinting, similarity analysis, and lightweight machine learning (Random Forest, XGBoost, Decision Trees). Features real-time monitoring dashboard and privacy-preserving behavioural analysis.",
     image: projectExclusive,
     tags: ["Python", "Scikit-learn", "Machine Learning", "Cybersecurity", "Behavioral Fingerprinting", "Node.js", "React"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // replace with your actual demo
   },
   {
     title: "Cinnamon Disease Classification",
@@ -26,8 +46,8 @@ const projects = [
       "Deep learning system using Transfer Learning with EfficientNetB0 for classifying cinnamon plant diseases with 94% accuracy.",
     image: projectCinnamonAi,
     tags: ["Python", "TensorFlow", "Deep Learning", "CNN", "Transfer Learning"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Aura Voice – Text-to-Speech NLP",
@@ -35,8 +55,8 @@ const projects = [
       "Multilingual Text-to-Speech application supporting English, Sinhala, Tamil, Hindi with modern UI and robust error handling.",
     image: projectAuraVoice,
     tags: ["Python", "NLP", "gTTS", "Tkinter", "Multilingual"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Smart Weather Prediction (ML)",
@@ -44,8 +64,8 @@ const projects = [
       "Weather prediction system using machine learning with data preprocessing, model training, and evaluation integrated into Django web app.",
     image: projectWeatherPrediction,
     tags: ["Python", "Django", "Scikit-learn", "Machine Learning"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Crystal Beauty – MERN E-Commerce",
@@ -53,8 +73,8 @@ const projects = [
       "Full-stack MERN e-commerce platform for a cosmetics brand with product listings, shopping cart, secure JWT authentication, and role-based admin dashboard.",
     image: projectCrystalBeauty,
     tags: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
-    liveUrl: "https://crystal-beauty.netlify.app/",
     githubUrl: "https://github.com/kspeiris/cbc-frontend.git",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "MediLink – E-Channeling System",
@@ -62,8 +82,8 @@ const projects = [
       "Healthcare e-channeling system with appointment booking, doctor channeling, Stripe payments, and automated receipt generation.",
     image: projectMedilink,
     tags: ["Laravel", "PHP", "Stripe", "MySQL", "MVC"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Sekin Express – Delivery System",
@@ -71,8 +91,8 @@ const projects = [
       "Complete delivery management system with real-time parcel tracking, role-based panels (Super Admin, Admin, Driver, User), and dynamic cost calculation.",
     image: projectSekinExpress,
     tags: ["Laravel", "PHP", "MySQL", "REST APIs", "Bootstrap"],
-    liveUrl: "https://www.sekinexpress.com/",
     githubUrl: "https://github.com/kspeiris/webSystem-for-a-delivery-service.git",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     title: "Skill Finder – Mobile App",
@@ -80,12 +100,18 @@ const projects = [
       "Cross-platform mobile app enabling users to discover, hire, and communicate with service providers across various skill categories.",
     image: projectSkillFinder,
     tags: ["Flutter", "Firebase", "Dart", "Real-time DB"],
-    liveUrl: "#",
     githubUrl: "#",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];
 
 export const ProjectsSection = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+
+  const handleOpenChange = (open: boolean) => {
+    if (!open) setSelectedProject(null);
+  };
+
   return (
     <section id="projects" className="py-20 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
@@ -135,7 +161,7 @@ export const ProjectsSection = () => {
                       variant="hero"
                       size="sm"
                       className="gap-2"
-                      onClick={() => window.open(project.liveUrl, "_blank")}
+                      onClick={() => setSelectedProject(project)}
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
@@ -156,7 +182,7 @@ export const ProjectsSection = () => {
                   <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-1">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-1">
                     {project.description}
                   </p>
 
@@ -198,8 +224,65 @@ export const ProjectsSection = () => {
             </a>
           </Button>
         </motion.div>
-
       </div>
+
+      {/* Modal */}
+      <Dialog open={!!selectedProject} onOpenChange={handleOpenChange}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-6 bg-card/95 backdrop-blur-lg border-border">
+          {selectedProject && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold">{selectedProject.title}</DialogTitle>
+              </DialogHeader>
+
+              {/* YouTube Video */}
+              <div className="aspect-video w-full mt-4 rounded-xl overflow-hidden bg-black/20">
+                <iframe
+                  src={getYoutubeEmbedUrl(selectedProject.videoUrl)}
+                  title={selectedProject.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+
+              {/* Full Description */}
+              <div className="mt-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  {selectedProject.description}
+                </p>
+              </div>
+
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {selectedProject.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full border border-primary/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* GitHub button only */}
+              <div className="mt-6 flex flex-wrap gap-4">
+                {selectedProject.githubUrl && selectedProject.githubUrl !== "#" && (
+                  <Button
+                    variant="heroOutline"
+                    size="sm"
+                    className="gap-2"
+                    onClick={() => window.open(selectedProject.githubUrl, "_blank")}
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </Button>
+                )}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
