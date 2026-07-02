@@ -72,17 +72,10 @@ const education = [
 const researchJourney = [
   {
     title: "CoordBotLab Guard",
-    institution: "AI & Cybersecurity Research",
+    institution: "Final Year Research Project",
     year: "2026",
     description:
-      "Developing an AI-driven bot detection and prevention system using behavioral analysis and machine learning.",
-  },
-  {
-    title: "Bot Detection Research",
-    institution: "Independent Research",
-    year: "2026",
-    description:
-      "Published research at JCoS 2026 on RF-based communication systems and IoT integration approaches.",
+      "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection. Developing a real-time cybersecurity framework using behavioural biometrics, behavioural fingerprinting, coordination-aware similarity analysis, and lightweight machine learning (Random Forest, XGBoost, Decision Trees) to detect coordinated bots while preserving user privacy.",
   },
   {
     title: "AI Projects",

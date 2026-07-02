@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, MapPin, Mail, Phone, Github, Linkedin, Twitter, CheckCircle } from "lucide-react";
+import { Send, MapPin, Mail, Phone, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
@@ -10,9 +10,9 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", url: "https://github.com/Eranga035225" },
-  { icon: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/eranga-kavisanka-ariyarathna-7249592a8" },
-  { icon: Twitter, label: "Twitter", url: "https://twitter.com" },
+  { icon: Github, label: "GitHub", url: "https://github.com/kspeiris" },
+  { icon: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/kavindu-peiris-149375297" },
+  { icon: Mail, label: "Email", url: "mailto:kavindup52@gmail.com" },
 ];
 
 export const ContactSection = () => {

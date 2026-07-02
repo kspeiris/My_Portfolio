@@ -196,15 +196,6 @@ export const HeroSection = () => {
               <Button
                 variant="hero"
                 size="xl"
-                onClick={() => scrollToSection("#research")}
-                className="gap-2"
-              >
-                Explore My Research <ExternalLink className="w-5 h-5" />
-              </Button>
-
-              <Button
-                variant="heroOutline"
-                size="xl"
                 onClick={() => scrollToSection("#projects")}
                 className="gap-2"
               >
