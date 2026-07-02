@@ -228,58 +228,71 @@ export const ProjectsSection = () => {
 
       {/* Modal */}
       <Dialog open={!!selectedProject} onOpenChange={handleOpenChange}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-6 bg-card/95 backdrop-blur-lg border-border">
+        <DialogContent className="max-w-6xl w-[95vw] max-h-[90vh] overflow-hidden p-0 bg-card/95 backdrop-blur-lg border-border">
           {selectedProject && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold">{selectedProject.title}</DialogTitle>
-              </DialogHeader>
+            <div className="grid lg:grid-cols-[1.6fr_1fr] gap-0 max-h-[90vh]">
+              <div className="p-6 lg:p-8">
+                <DialogHeader className="pr-8">
+                  <DialogTitle className="text-2xl font-bold">
+                    {selectedProject.title}
+                  </DialogTitle>
+                </DialogHeader>
 
-              {/* YouTube Video */}
-              <div className="aspect-video w-full mt-4 rounded-xl overflow-hidden bg-black/20">
-                <iframe
-                  src={getYoutubeEmbedUrl(selectedProject.videoUrl)}
-                  title={selectedProject.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+                {/* YouTube Video */}
+                <div className="mt-5 aspect-video w-full rounded-xl overflow-hidden bg-black/20 ring-1 ring-white/10">
+                  <iframe
+                    src={getYoutubeEmbedUrl(selectedProject.videoUrl)}
+                    title={selectedProject.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
 
-              {/* Full Description */}
-              <div className="mt-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  {selectedProject.description}
-                </p>
-              </div>
+              <div className="border-t lg:border-t-0 lg:border-l border-border/70 bg-background/30 p-6 lg:p-8 overflow-y-auto">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                      Project Details
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {selectedProject.description}
+                    </p>
+                  </div>
 
-              {/* Tags */}
-              <div className="mt-4 flex flex-wrap gap-2">
-                {selectedProject.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full border border-primary/20"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                  <div>
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                      Tech Stack
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full border border-primary/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-              {/* GitHub button only */}
-              <div className="mt-6 flex flex-wrap gap-4">
-                {selectedProject.githubUrl && selectedProject.githubUrl !== "#" && (
-                  <Button
-                    variant="heroOutline"
-                    size="sm"
-                    className="gap-2"
-                    onClick={() => window.open(selectedProject.githubUrl, "_blank")}
-                  >
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </Button>
-                )}
+                  {selectedProject.githubUrl && selectedProject.githubUrl !== "#" && (
+                    <div>
+                      <Button
+                        variant="heroOutline"
+                        size="sm"
+                        className="gap-2"
+                        onClick={() => window.open(selectedProject.githubUrl, "_blank")}
+                      >
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </Button>
+                    </div>
+                  )}
+                </div>
               </div>
-            </>
+            </div>
           )}
         </DialogContent>
       </Dialog>
