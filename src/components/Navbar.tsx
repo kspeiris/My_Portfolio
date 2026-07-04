@@ -9,10 +9,11 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#services" },
   { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
+  { name: "Research", href: "#research" },
   { name: "Experience", href: "#resume" },
+  { name: "Skills", href: "#skills" },
   { name: "Leadership", href: "#leadership" },
-  { name: "Blogs", href: "#blogs" },
+  { name: "Blog", href: "#blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -63,48 +64,62 @@ export const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="container mx-auto px-4 xl:px-8">
+          <div className="flex items-center justify-between h-16 xl:h-20">
             <motion.a
               href="#home"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("#home");
               }}
-              className="text-xl lg:text-2xl font-bold gradient-text"
+              className="text-xl xl:text-2xl font-bold gradient-text"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {"<kspeiris />"}
             </motion.a>
 
-            <div className="hidden lg:flex items-center gap-1">
-              {navItems.map((item, index) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.08 }}
-                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg ${
-                    activeSection === item.href.slice(1)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                  }`}
-                >
-                  {item.name}
-                </motion.a>
-              ))}
+            <div className="hidden xl:flex items-center gap-0.5 xl:gap-1">
+              {navItems.map((item, index) => {
+                const isActive = activeSection === item.href.slice(1);
+                const isProjects = item.name === "Projects";
+                return (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.08 }}
+                    className={`px-2.5 xl:px-3.5 py-1.5 text-xs xl:text-sm transition-all duration-200 rounded-lg relative ${
+                      isProjects
+                        ? isActive
+                          ? "text-primary bg-primary/15 border border-primary/40 font-bold shadow-sm shadow-primary/10"
+                          : "text-foreground font-semibold border border-primary/20 hover:border-primary/50 hover:bg-secondary/50 shadow-sm shadow-primary/5"
+                        : isActive
+                        ? "text-primary bg-primary/10 font-semibold"
+                        : "text-muted-foreground font-medium hover:text-foreground hover:bg-secondary/50"
+                    }`}
+                  >
+                    {item.name}
+                    {isProjects && (
+                      <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                      </span>
+                    )}
+                  </motion.a>
+                );
+              })}
             </div>
 
-            <div className="hidden lg:block">
-              <Button asChild variant="hero" size="default" className="gap-2">
+            <div className="hidden xl:block">
+              <Button asChild variant="hero" size="default" className="gap-2 hover:shadow-primary/40 shadow-md">
                 <a href={CV_PATH} download>
-                  <Download className="w-4 h-4" />
+                  <span className="text-base">⬇</span>
                   Download CV
                 </a>
               </Button>
@@ -112,7 +127,7 @@ export const Navbar = () => {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
+              className="xl:hidden p-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -132,7 +147,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            className="fixed inset-0 z-40 xl:hidden"
           >
             <div
               className="absolute inset-0 bg-background/80 backdrop-blur-sm"
@@ -169,9 +184,9 @@ export const Navbar = () => {
               </div>
 
               <div className="mt-6">
-                <Button asChild variant="hero" size="lg" className="w-full gap-2">
+                <Button asChild variant="hero" size="lg" className="w-full gap-2 hover:shadow-primary/40 shadow-md">
                   <a href={CV_PATH} download onClick={() => setIsMobileMenuOpen(false)}>
-                    <Download className="w-4 h-4" />
+                    <span className="text-base">⬇</span>
                     Download CV
                   </a>
                 </Button>

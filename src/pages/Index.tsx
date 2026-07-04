@@ -20,10 +20,10 @@ const Index = () => {
       <SocialSidebar />
       <HeroSection />
       <ServicesSection />
+      <ProjectsSection />
       <ResearchSection />
       <VerifiedBadgesSection />
       <ResumeSection />
-      <ProjectsSection />
       <SkillsSection />
       <LearningJourneySection />
       <LeadershipSection />
