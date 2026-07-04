@@ -4,67 +4,58 @@ import { motion } from "framer-motion";
 
 const activities = [
   {
-    title: "Head of Teaching Panel",
-    organization: "FusionX 1.0 AI Bootcamp - SLAAI",
-    period: "2025",
-    image: "/badges/community/fusionx.jpg",
+    title: "Freelance Software Developer",
+    organization: "Freelance / Real Client Projects",
+    period: "2025 – Present",
+    image: "/badges/community/freelancer.png",
     description:
-      "Led technical training sessions and coordinated AI learning activities for students.",
-    tags: ["AI", "Teaching", "Mentoring"],
-  },
-  {
-    title: "Batch Representative",
-    organization: "University of Sri Jayewardenepura",
-    period: "2025-Present",
-    image: "/badges/community/jpura.png",
-    description:
-      "Represented students and acted as a communication bridge between students and faculty.",
-    tags: ["Leadership", "Communication"],
-  },
-  {
-    title: "Open Source Contributor",
-    organization: "WSO2",
-    period: "2026",
-    image: "badges/community/wso2.webp",
-    description:
-      "Contributed to open-source software projects and collaborated with the developer community.",
-    tags: ["Open Source", "GitHub", "Collaboration"],
+      "Delivered enterprise desktop, web, and mobile applications for real clients. Managed client requirements, development, testing, deployment, and maintenance. Built scalable business solutions using modern software engineering practices.",
+    tags: ["Freelance", "Client Projects", "Software Engineering"],
   },
   {
     title: "Researcher & Author",
-    organization: "JCoS 2026",
-    period: "2026",
+    organization: "University of Sri Jayewardenepura",
+    period: "2025 – Present",
+    image: "/badges/community/research.webp",
+    description:
+      "Published and presented research at the J'PURA Computing Symposium (JCoS) 2026. Conducting research in AI-assisted Cybersecurity, Coordinated Bot Detection, Explainable AI, and Behavioural Biometrics.",
+    tags: ["Research", "AI", "Cybersecurity"],
+  },
+  {
+    title: "Open Source Contributor",
+    organization: "GitHub",
+    period: "2025 – Present",
+    image: "/badges/community/open.webp",
+    description:
+      "Contributing to open-source software projects through GitHub. Collaborating with developers using Git workflows and modern development practices.",
+    tags: ["Open Source", "GitHub", "Collaboration"],
+  },
+  {
+    title: "Technical Blogger",
+    organization: "Medium",
+    period: "2025 – Present",
     image: "/badges/community/medium.jpg",
     description:
-      "Published research on AI-assisted cybersecurity and bot detection systems.",
-    tags: ["Research", "Academic Publishing", "Cybersecurity"],
+      "Published 40+ technical articles covering Software Engineering, Artificial Intelligence, Backend Development, Cloud Computing, and System Design. Sharing tutorials, project case studies, and practical software engineering knowledge with the developer community.",
+    tags: ["Technical Writing", "Medium", "Knowledge Sharing"],
   },
   {
-    title: "Vice President",
-    organization: "Students' Union - Faculty of Computing, University of Sri Jayewardenepura",
-    period: "2023-2025",
-    image: "badges/community/jpura.png",
+    title: "Volunteer",
+    organization: "Sasnaka Sansada Foundation",
+    period: "2022 – 2023",
+    image: "/badges/community/sasnaka.jpg",
     description:
-      "Representing students, coordinating faculty-level initiatives, supporting student welfare activities, and contributing to leadership and decision-making processes within the Faculty of Computing.",
-    tags: ["Leadership", "Student Affairs", "Management"],
+      "Participated in volunteer and community service initiatives. Supported social impact programs and community outreach activities.",
+    tags: ["Volunteer", "Community Service"],
   },
   {
-    title: "Media Team Member",
-    organization: "IEEE Student Branch - USJ",
-    period: "2023 - 2024",
-    image: "badges/community/ieee1.jpg",
+    title: "Lifelong Learner",
+    organization: "Professional Development",
+    period: "Ongoing",
+    image: "/badges/community/life.png",
     description:
-      "Created promotional content and supported social media and event marketing activities.",
-    tags: ["IEEE", "Media", "Marketing"],
-  },
-  {
-    title: "Program Team Member",
-    organization: "IEEEXtreme",
-    period: "2023 - 2024",
-    image: "badges/community/ieee2.jpg",
-    description:
-      "Contributed to organizing and coordinating competitive programming events.",
-    tags: ["Events", "Leadership"],
+      "Continuously expanding expertise through professional certifications, research, and hands-on software engineering projects. Focus areas include Enterprise Software Engineering, Artificial Intelligence, Cloud Computing, and Cybersecurity.",
+    tags: ["Continuous Learning", "Professional Development"],
   },
 ];
 
