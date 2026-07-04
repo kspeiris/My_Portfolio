@@ -11,7 +11,7 @@ const footerLinks = {
   ],
   resources: [
     { name: "Blog", href: "#blogs" },
-    { name: "Resume", href: "#resume" },
+    { name: "Professional Journey", href: "#resume" },
     { name: "Skills", href: "#skills" },
     { name: "Leadership", href: "#leadership" },
   ],

@@ -3,35 +3,47 @@ import { Briefcase, GraduationCap, Award, FlaskConical } from "lucide-react";
 
 const experience = [
   {
-    company: "WSO2",
+    company: "GitHub",
     role: "Open Source Contributor",
-    duration: "2025 - Present",
+    duration: "2025 – Present",
     achievements: [
-      "Contributed to open-source software projects and community initiatives",
-      "Worked with Git-based collaboration workflows and modern software development practices",
-      "Strengthened expertise in software engineering and backend development",
+      "Contributing to open-source software projects through GitHub.",
+      "Developing reusable software components and improving existing projects.",
+      "Collaborating using Git, GitHub workflows, and modern software engineering practices.",
+      "Continuously learning through community-driven development.",
     ],
   },
-
   {
-    company: "Independent Research Project",
+    company: "Freelance / Real Client Projects",
+    role: "Software Engineer (Client Projects)",
+    duration: "2025 – 2026",
+    achievements: [
+      "Designed and developed enterprise desktop, web, and mobile applications for real-world business clients.",
+      "Delivered inventory management, field force automation, and business management systems.",
+      "Worked directly with clients to gather requirements and implement scalable software solutions.",
+      "Built full-stack applications using React, Node.js, Electron, Flutter, SQLite, and REST APIs.",
+    ],
+  },
+  {
+    company: "University of Sri Jayewardenepura",
     role: "Researcher & Author",
-    duration: "2025 - 2026",
+    duration: "2025 – Present",
     achievements: [
-      "Published research paper at the Jayewardenepura Computing Symposium (JCoS) 2026",
-      "Conducted a comparative analysis of RF-based offline communication systems for traveller and hiker safety",
-      "Explored IoT integration approaches and opportunistic cloud synchronization techniques",
+      "Conducting final-year research on AI-assisted coordinated bot detection.",
+      "Published and presented a research paper at the J'PURA Computing Symposium (JCoS) 2026.",
+      "Research interests include AI-assisted Cybersecurity, Behavioural Biometrics, Explainable AI, and Machine Learning.",
+      "Currently developing the CoordBot AI Guard framework.",
     ],
   },
-
   {
-    company: "InventX Solutions",
-    role: "Co-Founder",
-    duration: "2024 - Present",
+    company: "Union Bank of Colombo PLC",
+    role: "Trainee Bank Assistant",
+    duration: "2022 – 2023",
     achievements: [
-      "Collaborating on software solutions and technical projects for real-world clients",
-      "Participating in software development, system design, and collaborative coding practices",
-      "Managing project planning and technical decision-making activities",
+      "Assisted with day-to-day banking operations and customer service.",
+      "Supported account-related processes while ensuring compliance with banking procedures.",
+      "Worked with banking software and maintained accurate financial records.",
+      "Developed professional communication and customer relationship skills.",
     ],
   },
 ];
@@ -40,62 +52,74 @@ const education = [
   {
     degree: "BComp (Hons.) in Software Engineering",
     university: "University of Sri Jayewardenepura",
-    year: "2023 - Present",
+    year: "2023 – Present",
     highlights: [
-      "Current GPA: 3.89",
-      "Dean's List",
+      "Current GPA: 3.30",
+      "Final Year Undergraduate",
       "Faculty of Computing",
     ],
   },
-
   {
-    degree: "Diploma in English Language",
-    university: "Yale College of English Academy",
-    year: "2023",
+    degree: "Diploma in Information Technology & English",
+    university: "ESOFT Metro Campus",
+    year: "2022 – 2023",
     highlights: [
-      "English Communication",
-      "Professional Writing",
+      "Diploma in Information Technology",
+      "Diploma in English Language",
+      "Software Fundamentals",
+      "Professional Communication",
     ],
   },
-
   {
-    degree: "G.C.E Advanced Level",
-    university: "Pinnawala Central College",
-    year: "2022",
+    degree: "G.C.E. Advanced Level",
+    university: "Prince of Wales' College, Moratuwa",
+    year: "2021 / 2022",
     highlights: [
       "Physical Science Stream",
-      "BBB Results",
+      "Combined Mathematics – B",
+      "Physics – B",
+      "Chemistry – B",
     ],
+  },
+  {
+    degree: "G.C.E. Ordinary Level",
+    university: "Prince of Wales' College, Moratuwa",
+    year: "",
+    highlights: ["9 A Passes"],
   },
 ];
 
 const researchJourney = [
   {
-    title: "CoordBotLab Guard",
+    title: "CoordBot AI Guard",
     institution: "Final Year Research Project",
+    year: "2026 – Present",
+    description:
+      "Developing an AI-powered behavioural fingerprinting framework for coordinated bot detection in real-time web applications using Machine Learning, Explainable AI, and privacy-preserving techniques.",
+  },
+  {
+    title: "Published Research",
+    institution: "J'PURA Computing Symposium (JCoS) 2026",
     year: "2026",
     description:
-      "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection. Developing a real-time cybersecurity framework using behavioural biometrics, behavioural fingerprinting, coordination-aware similarity analysis, and lightweight machine learning (Random Forest, XGBoost, Decision Trees) to detect coordinated bots while preserving user privacy.",
+      "A Systematic Review of Coordinated Bot Detection Techniques in Real-Time Web and Mobile Applications – Published & Presented.",
   },
   {
-    title: "AI Projects",
+    title: "AI & Enterprise Software Projects",
     institution: "Software Engineering",
-    year: "2025",
+    year: "2025 – Present",
     description:
-      "Built multiple AI/ML systems including disease classification, NLP-based text-to-speech, and weather prediction.",
-  },
-  {
-    title: "Software Engineering Projects",
-    institution: "University & Self-Learning",
-    year: "2024",
-    description:
-      "Full-stack MERN, Laravel, and Flutter applications focusing on clean architecture and scalable backend design.",
+      "Designed and developed multiple AI-powered systems, enterprise software solutions, backend platforms, and cloud-native applications for academic and real-world use.",
   },
 ];
 
 const certifications = [
-  "Full Stack Web Development - Skyrek",
-  "Advanced DevOps Master Course - Imran Teli",
+  "AWS – Fundamentals of Machine Learning & Artificial Intelligence",
+  "AI/ML Engineer Stage 2 – SLIIT",
+  "Python Programming – University of Moratuwa",
+  "Cisco – Introduction to Cybersecurity",
+  "LinkedIn Learning – Full-Stack Deep Learning with Python",
+  "LinkedIn Learning – RAG, AI Apps & AI Agents",
 ];
 
 export const ResumeSection = () => {
@@ -115,7 +139,7 @@ export const ResumeSection = () => {
             My Journey
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="gradient-text">Resume</span>
+            <span className="gradient-text">Professional Journey</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A snapshot of my professional experience, research work, and educational background.
@@ -194,9 +218,11 @@ export const ResumeSection = () => {
                   >
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-card border-2 border-accent group-hover:bg-accent transition-colors" />
 
-                    <div className="mb-2">
-                      <span className="text-sm text-accent font-medium">{edu.year}</span>
-                    </div>
+                    {edu.year && (
+                      <div className="mb-2">
+                        <span className="text-sm text-accent font-medium">{edu.year}</span>
+                      </div>
+                    )}
                     <h4 className="text-lg font-bold mb-1">{edu.degree}</h4>
                     <p className="text-muted-foreground mb-3">{edu.university}</p>
                     <div className="flex flex-wrap gap-2">
