@@ -8,9 +8,7 @@ import { BlogsSection } from "@/components/BlogsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { SocialSidebar } from "@/components/SocialSidebar";
-import { VerifiedBadgesSection } from "@/components/VerifiedBadgesSection";
 import ResearchSection from "@/components/ResearchSection";
-import LearningJourneySection from "@/components/learningJourney";
 import LeadershipSection from "@/components/leadership";
 
 const Index = () => {
@@ -20,12 +18,10 @@ const Index = () => {
       <SocialSidebar />
       <HeroSection />
       <ServicesSection />
-      <ResearchSection />
-      <VerifiedBadgesSection />
-      <ResumeSection />
       <ProjectsSection />
+      <ResearchSection />
+      <ResumeSection />
       <SkillsSection />
-      <LearningJourneySection />
       <LeadershipSection />
       <BlogsSection />
       <ContactSection />

@@ -6,28 +6,24 @@ import {
   SiExpress,
   SiLaravel,
   SiFlutter,
-  SiDjango,
+  SiFastapi,
   SiTensorflow,
-  SiMysql,
   SiMongodb,
   SiFirebase,
   SiPython,
   SiJavascript,
   SiTypescript,
+  SiDocker,
+  SiPostgresql,
+  SiMysql,
 } from "react-icons/si";
 
 import { FaJava, FaPhp, FaDatabase } from "react-icons/fa";
 
 import {
   Brain,
-  Shield,
-  Code2,
   Cpu,
-  Network,
-  Lock,
   GitBranch,
-  BookOpen,
-  FlaskConical,
   Zap,
 } from "lucide-react";
 
@@ -43,14 +39,16 @@ const skills = [
   { name: "Express", icon: SiExpress, color: "from-gray-600 to-gray-800" },
   { name: "Laravel", icon: SiLaravel, color: "from-red-500 to-pink-500" },
   { name: "Flutter", icon: SiFlutter, color: "from-cyan-400 to-blue-500" },
-  { name: "Django", icon: SiDjango, color: "from-green-700 to-green-500" },
+  { name: "FastAPI", icon: SiFastapi, color: "from-teal-500 to-emerald-500" },
   { name: "TensorFlow", icon: SiTensorflow, color: "from-orange-500 to-yellow-500" },
   { name: "MySQL", icon: SiMysql, color: "from-blue-600 to-blue-400" },
   { name: "MongoDB", icon: SiMongodb, color: "from-green-500 to-green-700" },
   { name: "Firebase", icon: SiFirebase, color: "from-orange-500 to-yellow-500" },
+  { name: "Docker", icon: SiDocker, color: "from-blue-400 to-blue-600" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "from-blue-500 to-indigo-500" },
 ];
 
-const languageSkills = [
+const programmingLanguages = [
   "Java",
   "Python",
   "JavaScript",
@@ -60,52 +58,60 @@ const languageSkills = [
   "SQL",
 ];
 
-const frameworkSkills = [
+const frameworksAndPlatforms = [
   "React",
   "Node.js",
   "Express",
   "Laravel",
   "Flutter",
   "FastAPI",
-  "Django",
-  "TensorFlow",
-  "Scikit-learn",
+  "Flask",
+  "Electron",
 ];
 
-const databaseSkills = [
-  "MySQL",
+const databasesAndCloud = [
+  "PostgreSQL",
   "MongoDB",
+  "MySQL",
+  "SQLite",
   "Firebase",
+  "Prisma ORM",
 ];
 
-const aiSkills = [
+const artificialIntelligence = [
   "Machine Learning",
   "Deep Learning",
-  "CNN",
-  "Transfer Learning",
+  "RAG",
+  "Explainable AI",
+  "Computer Vision",
   "NLP",
   "TensorFlow",
-  "Scikit Learn",
+  "Scikit-learn",
+  "SHAP",
+  "LIME",
 ];
 
-const securitySkills = [
-  "Behavior Analysis",
-  "Bot Detection",
-  "Authentication",
-  "Authorization",
-  "Privacy",
-  "Threat Detection",
-];
-
-const engineeringSkills = [
-  "OOP",
-  "UML",
-  "Design Patterns",
-  "System Design",
+const softwareArchitecture = [
+  "Microservices",
   "REST APIs",
   "MVC",
-  "Software Testing",
+  "Clean Architecture",
+  "Design Patterns",
+  "System Design",
+  "OOP",
+  "UML",
+  "JWT Authentication",
+];
+
+const developmentToolsAndPractices = [
   "Git",
+  "Docker",
+  "Agile",
+  "CI/CD",
+  "Testing",
+  "API Integration",
+  "Responsive Design",
+  "Problem Solving",
 ];
 
 export const SkillsSection = () => {
@@ -146,8 +152,8 @@ export const SkillsSection = () => {
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Proficient in Software Engineering, Artificial Intelligence, Machine Learning,
-            Cybersecurity, and modern backend development frameworks.
+            Building enterprise software, AI-powered applications, scalable backend systems,
+            and cloud-native solutions using modern software engineering practices.
           </p>
         </motion.div>
 
@@ -194,57 +200,57 @@ export const SkillsSection = () => {
               Programming Languages
             </h4>
             {renderSkillBadges(
-              languageSkills,
+              programmingLanguages,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              Frameworks
+              Frameworks & Platforms
             </h4>
             {renderSkillBadges(
-              frameworkSkills,
+              frameworksAndPlatforms,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-primary">
-              Databases
+              Databases & Cloud
             </h4>
             {renderSkillBadges(
-              databaseSkills,
+              databasesAndCloud,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              AI & Machine Learning
+              Artificial Intelligence
             </h4>
             {renderSkillBadges(
-              aiSkills,
+              artificialIntelligence,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-primary">
-              Cybersecurity
+              Software Architecture
             </h4>
             {renderSkillBadges(
-              securitySkills,
+              softwareArchitecture,
               "bg-primary/10 text-primary border-primary/20"
             )}
           </div>
 
           <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6">
             <h4 className="font-bold mb-4 text-accent">
-              Software Engineering
+              Development Tools & Practices
             </h4>
             {renderSkillBadges(
-              engineeringSkills,
+              developmentToolsAndPractices,
               "bg-accent/10 text-accent border-accent/20"
             )}
           </div>

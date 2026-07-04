@@ -1,54 +1,46 @@
 import { motion } from "framer-motion";
-import {
-  Code2,
-  Brain,
-  Shield,
-  BookOpen,
-  Server,
-  Settings2,
-} from "lucide-react";
 
 const services = [
   {
-    icon: Code2,
-    title: "Software Engineering",
+    emoji: "🏢",
+    title: "Enterprise Software Engineering",
     description:
-      "Building scalable software systems using software engineering principles, design patterns, and best practices.",
+      "Developing enterprise-grade desktop and web applications that solve real business problems using scalable architectures, clean code principles, and modern software engineering practices.",
     gradient: "from-primary to-accent",
   },
   {
-    icon: Brain,
-    title: "Artificial Intelligence",
+    emoji: "🤖",
+    title: "Artificial Intelligence & Machine Learning",
     description:
-      "Exploring intelligent systems through Machine Learning, Deep Learning, and Natural Language Processing.",
+      "Building intelligent systems using Machine Learning, Explainable AI, RAG, NLP, and predictive analytics to create practical AI-powered solutions.",
     gradient: "from-accent to-primary",
   },
   {
-    icon: Shield,
+    emoji: "⚙️",
+    title: "Backend Engineering",
+    description:
+      "Designing secure REST APIs, microservices, authentication systems, and database-driven applications using modern backend technologies and cloud-native principles.",
+    gradient: "from-primary to-accent",
+  },
+  {
+    emoji: "💻",
+    title: "Full-Stack Application Development",
+    description:
+      "Creating responsive web and desktop applications with intuitive user experiences while integrating scalable backend services and databases.",
+    gradient: "from-accent to-primary",
+  },
+  {
+    emoji: "📚",
+    title: "Research & Innovation",
+    description:
+      "Conducting research in AI-assisted cybersecurity, bot detection, Explainable AI, and intelligent software systems with published academic contributions.",
+    gradient: "from-primary to-accent",
+  },
+  {
+    emoji: "🛡️",
     title: "Cybersecurity",
     description:
-      "Developing secure software, threat detection systems, and behavioral analysis for safer digital environments.",
-    gradient: "from-primary to-accent",
-  },
-  {
-    icon: BookOpen,
-    title: "Research",
-    description:
-      "Conducting applied research in AI-assisted Cybersecurity, Explainable AI, and Bot Detection.",
-    gradient: "from-accent to-primary",
-  },
-  {
-    icon: Server,
-    title: "Backend Development",
-    description:
-      "Building REST APIs, microservices, and database-driven applications using Laravel, Node.js, and FastAPI.",
-    gradient: "from-primary to-accent",
-  },
-  {
-    icon: Settings2,
-    title: "Enterprise Software",
-    description:
-      "Designing scalable software architecture using OOP, UML, Design Patterns, and System Design principles.",
+      "Applying secure software engineering practices, authentication, threat detection concepts, and AI-driven approaches to build resilient applications.",
     gradient: "from-accent to-primary",
   },
 ];
@@ -71,12 +63,11 @@ export const ServicesSection = () => {
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            My Focus <span className="gradient-text">Areas</span>
+            Technical <span className="gradient-text">Expertise</span>
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Software Engineering undergraduate passionate about Artificial Intelligence,
-            Machine Learning, Cybersecurity, and research-driven innovation.
+            Final-year Software Engineering undergraduate passionate about building enterprise software, AI-powered applications, scalable backend systems, and research-driven solutions with a strong focus on software engineering best practices.
           </p>
         </motion.div>
 
@@ -102,8 +93,10 @@ export const ServicesSection = () => {
                 <div
                   className={`relative w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} p-0.5 mb-6`}
                 >
-                  <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                    <service.icon className="w-8 h-8 text-primary" />
+                  <div className="w-full h-full bg-card rounded-xl flex items-center justify-center text-3xl">
+                    <span role="img" aria-label={service.title}>
+                      {service.emoji}
+                    </span>
                   </div>
                 </div>
 
