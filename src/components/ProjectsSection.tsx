@@ -1013,6 +1013,7 @@ export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeTab, setActiveTab] = useState("demo");
   const [showFullDetails, setShowFullDetails] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
@@ -1024,6 +1025,8 @@ export const ProjectsSection = () => {
 
   const getProjectSummary = (project: Project) =>
     project.summary ?? project.description.split(". ")[0];
+
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 12);
 
   return (
     <section id="projects" className="py-20 lg:py-32 relative overflow-hidden">
@@ -1050,13 +1053,13 @@ export const ProjectsSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: (index % 12) * 0.05 }}
               whileHover={{ y: -10 }}
               className="group relative"
             >
@@ -1120,23 +1123,44 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <Button variant="heroOutline" size="lg" asChild>
-            <a
-              href="https://github.com/kspeiris"
-              target="_blank"
-              rel="noopener noreferrer"
+        {projects.length > 12 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+          >
+            <Button
+              variant="heroOutline"
+              size="lg"
+              onClick={() => setShowAllProjects(!showAllProjects)}
+              className="gap-2"
             >
-              View All Projects
-            </a>
-          </Button>
-        </motion.div>
+              {showAllProjects ? (
+                <>
+                  Show Less
+                  <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  More Projects
+                  <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </Button>
+
+            <Button variant="heroOutline" size="lg" asChild>
+              <a
+                href="https://github.com/kspeiris"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View All Projects
+              </a>
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Modal */}
