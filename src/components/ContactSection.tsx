@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const contactInfo = [
   { icon: MapPin, label: "Location", value: "Sri Lanka" },
-  { icon: Mail, label: "Email", value: "erangakavishanka111@gmail.com" },
-  { icon: Phone, label: "Phone", value: "+94 71 527 1694" },
+  { icon: Mail, label: "Email", value: "kavindup52@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+94 71 930 4472" },
 ];
 
 const socialLinks = [
@@ -38,7 +38,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      
+
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
 
@@ -105,11 +105,10 @@ export const ContactSection = () => {
                     {/* Name Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          focusedField === "name" || formData.name
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "name" || formData.name
                             ? "text-xs text-primary -top-2 bg-card px-2"
                             : "text-muted-foreground top-4"
-                        }`}
+                          }`}
                       >
                         Your Name
                       </motion.label>
@@ -127,11 +126,10 @@ export const ContactSection = () => {
                     {/* Email Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          focusedField === "email" || formData.email
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "email" || formData.email
                             ? "text-xs text-primary -top-2 bg-card px-2"
                             : "text-muted-foreground top-4"
-                        }`}
+                          }`}
                       >
                         Your Email
                       </motion.label>
@@ -149,11 +147,10 @@ export const ContactSection = () => {
                     {/* Message Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${
-                          focusedField === "message" || formData.message
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "message" || formData.message
                             ? "text-xs text-primary -top-2 bg-card px-2"
                             : "text-muted-foreground top-4"
-                        }`}
+                          }`}
                       >
                         Your Message
                       </motion.label>

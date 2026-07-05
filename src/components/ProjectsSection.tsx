@@ -28,6 +28,9 @@ import projectLec from "@/assets/projectlec.png";
 import projectThreat from "@/assets/projectthreat.png";
 import projectPos from "@/assets/projectpos.png";
 import projectIns from "@/assets/projectins.png";
+import projectData from "@/assets/projectdata.png";
+import projectCood from "@/assets/projectcood.png";
+import projectSvems from "@/assets/projectsvems.png";
 
 type Project = {
   title: string;
@@ -816,12 +819,201 @@ const projects: Project[] = [
     githubUrl: "https://github.com/kspeiris/AI-Intrusion-Detection-cybersecurity",
     videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
   },
+  {
+    title: "DataAnalyzer Pro",
+    description:
+      "Full-Stack Big Data Analysis & Visualization Platform for CSV and JSON Datasets.",
+    summary:
+      "A full-stack data analytics platform that enables users to upload, process, analyze, and visualize large CSV and JSON datasets through an intuitive web interface, providing statistical analysis, machine learning insights, interactive visualizations, and scalable data processing for business intelligence and research.",
+    details: [
+      "Designed and developed a comprehensive data analysis platform that allows users to upload large CSV and JSON datasets, perform automated data profiling, statistical analysis, missing value detection, correlation analysis, clustering, Principal Component Analysis (PCA), trend analysis, outlier detection, and interactive visualization through a responsive web dashboard.",
+      "Implemented a complete analytics ecosystem featuring disk-backed session management for large datasets, sampling-based processing for computationally intensive operations, automated dataset summarization, data preprocessing, machine learning-based clustering, RESTful API services, dynamic chart generation, interactive dashboards, and efficient backend processing using industry-standard data science libraries.",
+      "Built using React, Flask, Pandas, and Scikit-learn following a scalable client-server architecture with RESTful APIs, Axios-based communication, Dask-powered large dataset processing, PyArrow optimization, Matplotlib and Recharts visualizations, responsive user interfaces, and enterprise-ready workflows for business intelligence, research, and data exploration.",
+    ],
+    features: [
+      "CSV & JSON Dataset Upload",
+      "Large Dataset Processing",
+      "Disk-Backed Session Management",
+      "Dataset Summary & Profiling",
+      "Missing Value Analysis",
+      "Correlation Analysis",
+      "K-Means Clustering",
+      "Principal Component Analysis (PCA)",
+      "Trend Analysis",
+      "Outlier Detection",
+      "Interactive Data Visualization",
+      "Statistical Analytics Dashboard",
+      "Sampling-Based Processing",
+      "RESTful API Architecture",
+      "Responsive Analytics Dashboard",
+    ],
+    technologies: [
+      "React.js",
+      "Flask",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Dask",
+      "PyArrow",
+      "Matplotlib",
+      "Recharts",
+      "Axios",
+      "JavaScript",
+      "REST APIs",
+      "HTML",
+      "CSS",
+      "Git",
+      "GitHub"
+    ],
+    image: projectData,
+    tags: [
+      "Big Data",
+      "Data Analytics",
+      "Data Visualization",
+      "Business Intelligence",
+      "Machine Learning",
+      "React",
+      "Flask",
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Data Science",
+      "Full Stack Development"
+    ],
+    githubUrl: "https://github.com/kspeiris/BigData-Analytics-App",
+    videoUrl: "https://youtu.be/-YVeXidDdDc?si=tzabVd-h-cuqmT3H",
+  },
+  {
+    title: "CoordBotLab Guard",
+    description:
+      "AI-Powered Browser Extension for Coordination-Aware Bot Detection & Behavioral Security Analytics.",
+    summary:
+      "A privacy-preserving browser extension that detects coordinated bot-like behavior using lightweight behavioral telemetry, explainable risk analysis, and real-time interaction monitoring, enabling coordination-aware security research and offline machine learning through anonymized behavioral data collection.",
+    details: [
+      "Designed and developed an intelligent browser extension that monitors user interaction patterns through privacy-safe behavioral telemetry, capturing click, scroll, and keyboard timing metadata to identify suspicious coordinated bot-like activities without relying on browser fingerprinting, server-side tracking, or invasive data collection.",
+      "Implemented a complete behavioral analytics ecosystem featuring explainable rule-based risk scoring, event timing analysis, burst behavior detection, low-jitter interaction analysis, repeated action sequence detection, multi-tab coordination monitoring, anonymized JSONL export for offline machine learning, real-time popup risk visualization, and privacy-first client-side security analytics.",
+      "Built using JavaScript, Chrome Extension APIs, HTML, CSS, and Python with a lightweight browser extension architecture, event-driven telemetry collection, offline machine learning workflow support, modular behavioral analysis components, explainable security heuristics, and research-oriented cybersecurity capabilities for coordinated bot detection and behavioral biometrics.",
+    ],
+    features: [
+      "Privacy-Preserving Behavioral Monitoring",
+      "Real-Time Browser Activity Analysis",
+      "Explainable Risk Scoring",
+      "Coordination-Aware Bot Detection",
+      "Behavioral Event Collection",
+      "Click, Scroll & Keyboard Telemetry",
+      "Event Timing Analysis",
+      "Burst Behavior Detection",
+      "Low-Jitter Pattern Detection",
+      "Multi-Tab Coordination Monitoring",
+      "JSONL Export for Machine Learning",
+      "Offline Feature Engineering Support",
+      "Browser Extension Dashboard",
+      "Client-Side Security Analytics",
+      "Privacy-First Data Collection",
+    ],
+    technologies: [
+      "JavaScript",
+      "Chrome Extension API",
+      "HTML",
+      "CSS",
+      "Python",
+      "JSONL",
+      "Behavioral Analytics",
+      "Browser Security",
+      "Cybersecurity",
+      "Machine Learning",
+      "Event-Driven Architecture",
+      "Git",
+      "GitHub"
+    ],
+    image: projectCood,
+    tags: [
+      "Browser Extension",
+      "Cybersecurity",
+      "Bot Detection",
+      "Behavioral Analytics",
+      "Machine Learning",
+      "Privacy-Preserving AI",
+      "Browser Security",
+      "JavaScript",
+      "Chrome Extension",
+      "Behavioral Biometrics",
+      "Real-Time Monitoring",
+      "Security Research"
+    ],
+    githubUrl: "https://github.com/kspeiris/CoordBotLab---Study",
+    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+  },
+  {
+    title: "Svems Photographer",
+    description:
+      "Full-Stack Photography Portfolio & Gallery Management Platform.",
+    summary:
+      "A modern full-stack photography portfolio platform that enables photographers to showcase categorized galleries, manage image collections, communicate with clients, and administer website content through a secure dashboard with image optimization, authentication, and content management features.",
+    details: [
+      "Designed and developed a comprehensive photography portfolio platform that allows photographers to showcase categorized galleries, display featured images, receive client inquiries through a secure contact system, and manage their online presence with a modern, responsive web interface optimized for professional photography portfolios.",
+      "Implemented a complete content management ecosystem featuring secure administrator authentication, gallery and category management, image uploading and optimization, featured image management, bulk gallery operations, contact message management, website settings configuration, server-side validation, CSRF protection, password hashing, and automated validation testing.",
+      "Built using Flask, MongoDB, and Pillow following a scalable client-server architecture with Flask-Login authentication, MongoDB data management, image processing and optimization, Jinja2 templating, responsive frontend design, secure file upload workflows, REST-inspired application architecture, and production-ready deployment support with Gunicorn.",
+    ],
+    features: [
+      "Photography Portfolio Website",
+      "Category-Based Gallery Management",
+      "Featured Image Management",
+      "Secure Admin Dashboard",
+      "Administrator Authentication",
+      "Contact Form Management",
+      "Image Upload & Optimization",
+      "Category Management",
+      "Bulk Gallery Operations",
+      "Website Settings Management",
+      "Server-Side Validation",
+      "CSRF Protection",
+      "Password Hashing",
+      "Responsive User Interface",
+      "Automated Validation Testing",
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "MongoDB",
+      "Flask-Login",
+      "Flask-PyMongo",
+      "Pillow",
+      "Jinja2",
+      "Werkzeug",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Gunicorn",
+      "Git",
+      "GitHub"
+    ],
+    image: projectSvems,
+    tags: [
+      "Flask",
+      "MongoDB",
+      "Photography Portfolio",
+      "Content Management System",
+      "Gallery Management",
+      "Image Processing",
+      "Web Development",
+      "Python",
+      "Responsive Design",
+      "Authentication",
+      "Portfolio Website",
+      "Full Stack Development"
+    ],
+    githubUrl: "https://github.com/kspeiris/svems-photography",
+    videoUrl: "https://youtu.be/waAaF0yys7w?si=XVsS4hYK2kJvNyz4",
+  },
 ];
 
 export const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeTab, setActiveTab] = useState("demo");
   const [showFullDetails, setShowFullDetails] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
@@ -833,6 +1025,8 @@ export const ProjectsSection = () => {
 
   const getProjectSummary = (project: Project) =>
     project.summary ?? project.description.split(". ")[0];
+
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 12);
 
   return (
     <section id="projects" className="py-20 lg:py-32 relative overflow-hidden">
@@ -859,13 +1053,13 @@ export const ProjectsSection = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: (index % 12) * 0.05 }}
               whileHover={{ y: -10 }}
               className="group relative"
             >
@@ -929,23 +1123,44 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <Button variant="heroOutline" size="lg" asChild>
-            <a
-              href="https://github.com/kspeiris"
-              target="_blank"
-              rel="noopener noreferrer"
+        {projects.length > 12 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+          >
+            <Button
+              variant="heroOutline"
+              size="lg"
+              onClick={() => setShowAllProjects(!showAllProjects)}
+              className="gap-2"
             >
-              View All Projects
-            </a>
-          </Button>
-        </motion.div>
+              {showAllProjects ? (
+                <>
+                  Show Less
+                  <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  More Projects
+                  <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </Button>
+
+            <Button variant="heroOutline" size="lg" asChild>
+              <a
+                href="https://github.com/kspeiris"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View All Projects
+              </a>
+            </Button>
+          </motion.div>
+        )}
       </div>
 
       {/* Modal */}
