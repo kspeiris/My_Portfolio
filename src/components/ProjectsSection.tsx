@@ -17,7 +17,7 @@ import projectCinnamonAi from "@/assets/project-cinnamon-ai.jpg";
 import projectAuraVoice from "@/assets/project-aura-voice.jpg";
 import projectWeatherPrediction from "@/assets/project-weather-prediction.jpg";
 import projectSkillFinder from "@/assets/project-skill-finder.jpg";
-import projectExclusive from "@/assets/project-exclusive.jpg";
+import projectStock from "@/assets/projectstock.png";
 
 type Project = {
   title: string;
@@ -47,33 +47,62 @@ const getYoutubeEmbedUrl = (url: string) => {
 
 const projects: Project[] = [
   {
-    title: "CoordBotLab Guard",
+    title: "JFI CONSOL Stock Control System",
     description:
-      "Lightweight Web Behavioural Fingerprinting Framework for Coordinated Bot Detection.",
+      "Enterprise Desktop Stock Control & Inventory Management System developed for JFI CONSOLIDATED (PVT) LTD.",
     summary:
-      "Lightweight behavioural fingerprinting framework for coordinated bot detection with real-time monitoring and privacy-preserving analysis.",
+      "Custom-built enterprise desktop application that digitizes warehouse and inventory operations through an offline-first architecture, providing complete inventory, procurement, reporting, and analytics capabilities.",
     details: [
-      "Real-time cybersecurity framework that detects coordinated bots through behavioural fingerprinting, similarity analysis, and lightweight machine learning.",
-      "Built with Random Forest, XGBoost, and Decision Trees to analyze traffic patterns while keeping the pipeline lightweight and practical.",
-      "Includes a monitoring dashboard and privacy-preserving analysis flow for operational visibility.",
+      "Developed as a custom enterprise solution for JFI CONSOLIDATED (PVT) LTD, Colombo to replace manual warehouse workflows with a comprehensive desktop-based inventory management system.",
+      "Implemented end-to-end inventory management including Item Management, Supplier Management, Purchase Orders (PO), Goods Received Notes (GRN), Material Issue Notes (MIN), Purchase Returns (PRN), stock ledger management, interactive analytics, reporting, and automated database backup.",
+      "Built with Electron, React, and SQLite using an offline-first architecture, delivering fast performance, secure local data storage, professional printable business documents, and real-time business insights.",
     ],
     features: [
-      "Secure User Authentication & Profile Management",
-      "Semester & Subject Management",
-      "Assignment & Exam Tracking",
-      "Automatic SGPA & CGPA Calculation",
-      "GPA Prediction & Academic Analytics",
-      "Academic Goal Tracking",
-      "Assignment & Exam Reminder Notifications",
-      "Interactive Performance Dashboard",
-      "RESTful Microservices Architecture",
-      "Responsive Web Application",
+      "Inventory & Warehouse Management",
+      "Item Master Management",
+      "Supplier Management",
+      "Purchase Order (PO) Processing",
+      "Goods Received Notes (GRN)",
+      "Material Issue Notes (MIN)",
+      "Purchase Return (PRN) Management",
+      "Real-time Stock Ledger",
+      "Low Stock & Reorder Alerts",
+      "Interactive Analytics Dashboard",
+      "PDF Report Generation",
+      "Professional Print Templates",
+      "Secure Administrator Authentication",
+      "Automated Database Backup & Recovery",
+      "Offline-first Desktop Architecture",
     ],
-    technologies: ["React.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM", "JWT Authentication", "Nginx", "Tailwind CSS", "Recharts", "REST APIs", "Docker", "Microservices", "Git", "GitHub"],
-    image: projectExclusive,
-    tags: ["Python", "Scikit-learn", "Machine Learning", "Cybersecurity", "Behavioral Fingerprinting", "Node.js", "React"],
-    githubUrl: "#",
-    videoUrl: "https://youtu.be/rjw6-aeIzKU?si=jAQfxgEN_88lH1c1", // replace with your actual demo
+    technologies: [
+      "Electron",
+      "React.js",
+      "JavaScript",
+      "Node.js",
+      "SQLite3",
+      "Tailwind CSS",
+      "Electron IPC",
+      "Recharts",
+      "jsPDF",
+      "HTML2Canvas",
+      "Git",
+      "GitHub"
+    ],
+    image: projectStock,
+    tags: [
+      "Enterprise Software",
+      "Desktop Application",
+      "Electron",
+      "React",
+      "SQLite",
+      "Inventory Management",
+      "Warehouse Management",
+      "Procurement",
+      "Business Analytics",
+      "Offline-first"
+    ],
+    githubUrl: "https://github.com/kspeiris/stock-control-system-for-JFI-CONSOLIDATED",
+    videoUrl: "https://youtu.be/fg826iYrKYA?si=VKQru--18oXXtsK_",
   },
   {
     title: "Cinnamon Disease Classification",
