@@ -126,11 +126,11 @@ export const HeroSection = () => {
                 <motion.img
                   src="/profileImage.jpg"
                   alt="Kavindu Peiris"
-                  initial={{ scale: 1.25 }}
-                  animate={{ scale: 1.35 }}
-                  whileHover={{ scale: 1.45 }}
+                  initial={{ scale: 1.0 }}
+                  animate={{ scale: 1.0 }}
+                  whileHover={{ scale: 1.05 }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
-                  className="w-full h-full object-cover object-[center_20%]"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -145,7 +145,7 @@ export const HeroSection = () => {
               </motion.div>
             </div>
           </motion.div>
-
+ 
           <div className="flex-1 text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -155,7 +155,7 @@ export const HeroSection = () => {
             >
               Hi, I'm <span className="gradient-text">Kavindu Peiris</span>
             </motion.h1>
-
+ 
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -176,7 +176,7 @@ export const HeroSection = () => {
                 </span>
               </span>
             </motion.div>
-
+ 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -186,7 +186,7 @@ export const HeroSection = () => {
               Building secure, intelligent software systems through Software Engineering,
               Artificial Intelligence, Machine Learning, and Cybersecurity research.
             </motion.p>
-
+ 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -201,15 +201,15 @@ export const HeroSection = () => {
               >
                 View Projects <ExternalLink className="w-5 h-5" />
               </Button>
-
+ 
               <Button
                 variant="heroOutline"
                 size="xl"
-                onClick={() => window.open("/cv.pdf", "_blank")}
+                onClick={() => scrollToSection("#contact")}
                 className="gap-2"
               >
-                <Download className="w-5 h-5" />
-                Download CV
+                <Mail className="w-5 h-5" />
+                Contact Me
               </Button>
             </motion.div>
 
