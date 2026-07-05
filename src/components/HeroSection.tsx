@@ -164,7 +164,7 @@ export const HeroSection = () => {
             >
               <span className="relative inline-flex items-center leading-none h-[1.6em]">
                 <span className="invisible whitespace-nowrap">{placeholder}</span>
-                <span className="absolute left-0 top-0 inline-flex items-center whitespace-nowrap leading-none">
+                <span className="absolute left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 top-0 inline-flex items-center whitespace-nowrap leading-none">
                   <span>{roleText}</span>
                   <motion.span
                     className="ml-1 inline-block leading-none"
