@@ -31,6 +31,8 @@ import projectIns from "@/assets/projectins.png";
 import projectData from "@/assets/projectdata.png";
 import projectCood from "@/assets/projectcood.png";
 import projectSvems from "@/assets/projectsvems.png";
+import projectgra from "@/assets/projectgra.png";
+import projectslice from "@/assets/projectslice.png";
 
 type Project = {
   title: string;
@@ -218,7 +220,7 @@ const projects: Project[] = [
       "Git",
       "GitHub"
     ],
-    image: projectExclusive,
+    image: projectgra,
     tags: [
       "SaaS",
       "Cloud Native",
@@ -233,8 +235,8 @@ const projects: Project[] = [
       "Full Stack",
       "Analytics Dashboard"
     ],
-    githubUrl: "https://github.com/kspeiris/YOUR_REPOSITORY",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    githubUrl: "https://github.com/kspeiris/gradify-app",
+    videoUrl: "https://youtu.be/0waxHJMtZUE?si=DDHOMqrAGklx0mn0",
   },
   {
     title: "Bio Care Sales App",
@@ -295,7 +297,7 @@ const projects: Project[] = [
       "Cross Platform"
     ],
     githubUrl: "https://github.com/kspeiris/salesperson_mobile_app",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/6LaDM1erCUU?si=pkP4OnbYOAzgfOMR",
   },
   {
     title: "AI-Driven Employee Layoff Risk Prediction System",
@@ -424,7 +426,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/cyber-threat-intelligence--n8n-pipeline",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/N6EtBlSMHgg?si=NPaEQWscZRxwqIuj",
   },
   {
     title: "PneumoScope",
@@ -602,7 +604,7 @@ const projects: Project[] = [
       "Git",
       "GitHub"
     ],
-    image: projectExclusive,
+    image: projectslice,
     tags: [
       "MERN Stack",
       "React",
@@ -618,7 +620,7 @@ const projects: Project[] = [
       "Full Stack Development"
     ],
     githubUrl: "https://github.com/kspeiris/slice-hub",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/hgzoPgwoc6w",
   },
   {
     title: "ThreatOps",
@@ -686,7 +688,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/insider-threat-detection",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/KLDeOIYk_ZI?si=2Gm7g82BjW9w6ioX",
   },
   {
     title: "QuickPOS Lite",
@@ -817,7 +819,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/AI-Intrusion-Detection-cybersecurity",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/TVFfh8anT9k?si=IynkJl91Dzgv49xr",
   },
   {
     title: "DataAnalyzer Pro",
@@ -943,7 +945,7 @@ const projects: Project[] = [
       "Security Research"
     ],
     githubUrl: "https://github.com/kspeiris/CoordBotLab---Study",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtube.com/@kspeiris?si=muPw-FhJK7g7S4FU",
   },
   {
     title: "Svems Photographer",
