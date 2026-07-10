@@ -80,9 +80,9 @@ export const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="group relative"
+              className="group relative flex flex-col h-full"
             >
-              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 h-full overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
+              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 flex flex-col h-full overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div
@@ -90,21 +90,23 @@ export const ServicesSection = () => {
                   />
                 </div>
 
-                <div
-                  className={`relative w-16 h-16 rounded-xl bg-gradient-to-r ${service.gradient} p-0.5 mb-6`}
-                >
-                  <div className="w-full h-full bg-card rounded-xl flex items-center justify-center text-3xl">
-                    <span role="img" aria-label={service.title}>
-                      {service.emoji}
-                    </span>
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className={`relative w-14 h-14 rounded-xl bg-gradient-to-r ${service.gradient} p-0.5 flex-shrink-0`}
+                  >
+                    <div className="w-full h-full bg-card rounded-xl flex items-center justify-center text-2xl">
+                      <span role="img" aria-label={service.title}>
+                        {service.emoji}
+                      </span>
+                    </div>
                   </div>
+
+                  <h3 className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
                 </div>
 
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed flex-grow">
                   {service.description}
                 </p>
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, MapPin, Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Send, MapPin, Mail, Phone, Github, Linkedin, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
@@ -22,16 +23,38 @@ export const ContactSection = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 3000);
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSubmitted(true);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", message: "" });
+      }, 3000);
+    } catch (error) {
+      console.log(error);
+      alert("Failed to send message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -165,9 +188,9 @@ export const ContactSection = () => {
                       />
                     </div>
 
-                    <Button variant="hero" size="xl" type="submit" className="w-full gap-2">
+                    <Button variant="hero" size="xl" type="submit" className="w-full gap-2" disabled={isSubmitting}>
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </motion.form>
                 )}
@@ -229,15 +252,17 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="relative h-48 bg-card/30 backdrop-blur-sm border border-border rounded-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Sri Lanka</p>
-                </div>
-              </div>
+            {/* Google Map */}
+            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-2 overflow-hidden">
+              <iframe
+                title="Panadura, Sri Lanka"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.26372319992!2d79.88823613395822!3d6.729656176108944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1783677847611!5m2!1sen!2slk"
+                className="w-full h-48 rounded-lg"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
             </div>
           </motion.div>
         </div>

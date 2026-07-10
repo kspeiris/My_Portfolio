@@ -31,6 +31,11 @@ import projectIns from "@/assets/projectins.png";
 import projectData from "@/assets/projectdata.png";
 import projectCood from "@/assets/projectcood.png";
 import projectSvems from "@/assets/projectsvems.png";
+import projectgra from "@/assets/projectgra.png";
+import projectslice from "@/assets/projectslice.png";
+import projectml from "@/assets/projectml.png";
+import projectnest from "@/assets/projectnest.png";
+import projectrag from "@/assets/projectrag.png";
 
 type Project = {
   title: string;
@@ -218,7 +223,7 @@ const projects: Project[] = [
       "Git",
       "GitHub"
     ],
-    image: projectExclusive,
+    image: projectgra,
     tags: [
       "SaaS",
       "Cloud Native",
@@ -233,8 +238,8 @@ const projects: Project[] = [
       "Full Stack",
       "Analytics Dashboard"
     ],
-    githubUrl: "https://github.com/kspeiris/YOUR_REPOSITORY",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    githubUrl: "https://github.com/kspeiris/gradify-app",
+    videoUrl: "https://youtu.be/0waxHJMtZUE?si=DDHOMqrAGklx0mn0",
   },
   {
     title: "Bio Care Sales App",
@@ -295,7 +300,7 @@ const projects: Project[] = [
       "Cross Platform"
     ],
     githubUrl: "https://github.com/kspeiris/salesperson_mobile_app",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/6LaDM1erCUU?si=pkP4OnbYOAzgfOMR",
   },
   {
     title: "AI-Driven Employee Layoff Risk Prediction System",
@@ -424,7 +429,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/cyber-threat-intelligence--n8n-pipeline",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/N6EtBlSMHgg?si=NPaEQWscZRxwqIuj",
   },
   {
     title: "PneumoScope",
@@ -602,7 +607,7 @@ const projects: Project[] = [
       "Git",
       "GitHub"
     ],
-    image: projectExclusive,
+    image: projectslice,
     tags: [
       "MERN Stack",
       "React",
@@ -618,7 +623,7 @@ const projects: Project[] = [
       "Full Stack Development"
     ],
     githubUrl: "https://github.com/kspeiris/slice-hub",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/hgzoPgwoc6w",
   },
   {
     title: "ThreatOps",
@@ -686,7 +691,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/insider-threat-detection",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/KLDeOIYk_ZI?si=2Gm7g82BjW9w6ioX",
   },
   {
     title: "QuickPOS Lite",
@@ -817,7 +822,7 @@ const projects: Project[] = [
       "Python"
     ],
     githubUrl: "https://github.com/kspeiris/AI-Intrusion-Detection-cybersecurity",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtu.be/TVFfh8anT9k?si=IynkJl91Dzgv49xr",
   },
   {
     title: "DataAnalyzer Pro",
@@ -943,7 +948,7 @@ const projects: Project[] = [
       "Security Research"
     ],
     githubUrl: "https://github.com/kspeiris/CoordBotLab---Study",
-    videoUrl: "https://youtu.be/YOUR_DEMO_VIDEO",
+    videoUrl: "https://youtube.com/@kspeiris?si=muPw-FhJK7g7S4FU",
   },
   {
     title: "Svems Photographer",
@@ -1007,6 +1012,247 @@ const projects: Project[] = [
     githubUrl: "https://github.com/kspeiris/svems-photography",
     videoUrl: "https://youtu.be/waAaF0yys7w?si=XVsS4hYK2kJvNyz4",
   },
+  {
+    title: "AutoML Trainer",
+    description:
+      "No-Code AutoML Platform with Flask, Scikit-learn, Interactive Analytics, Model Comparison, and Prediction APIs.",
+
+    summary:
+      "A production-ready AutoML web application that enables users to upload spreadsheet datasets, automatically preprocess data, train multiple machine learning models, compare performance through interactive visualizations, and deploy predictions via an intuitive web interface or REST API. The platform streamlines the complete machine learning lifecycle without requiring coding knowledge.",
+
+    details: [
+      "Designed and developed a complete end-to-end AutoML platform that automates dataset validation, quality analysis, missing value handling, feature preprocessing, model selection, hyperparameter optimization, and machine learning model training for both classification and regression problems using intelligent preprocessing pipelines built with Scikit-learn.",
+
+      "Implemented a modern Flask-based web application featuring dataset upload, automatic data quality reporting, target variable selection, multi-model training, performance comparison dashboards, feature importance visualization, downloadable trained models, cleaned datasets, real-time single predictions, batch predictions, prediction history, and interactive OpenAPI documentation for seamless user experience.",
+
+      "Built using Python, Flask, Scikit-learn, Pandas, NumPy, Chart.js, Matplotlib, and Swagger UI with a scalable architecture that integrates preprocessing pipelines, automated feature engineering, model persistence, REST APIs, interactive analytics, downloadable deployment artifacts, and production-ready machine learning workflows suitable for business intelligence and enterprise analytics."
+    ],
+
+    features: [
+      "CSV/XLS/XLSX Dataset Upload",
+      "Automatic Data Quality Analysis",
+      "Smart Data Cleaning",
+      "Missing Value Handling",
+      "Categorical Feature Encoding",
+      "Automatic Feature Preprocessing",
+      "Target Variable Selection",
+      "Classification & Regression Support",
+      "Multi-Model Training",
+      "Smart Model Recommendations",
+      "Hyperparameter Optimization",
+      "Model Performance Comparison",
+      "Interactive Performance Charts",
+      "Feature Importance Analysis",
+      "Training Time Analytics",
+      "Download Trained Models",
+      "Download Cleaned Dataset",
+      "Single Record Prediction",
+      "Batch File Prediction",
+      "Prediction Confidence Scores",
+      "Prediction History",
+      "REST Prediction API",
+      "OpenAPI / Swagger Documentation",
+      "Model Analytics Dashboard"
+    ],
+
+    technologies: [
+      "Python",
+      "Flask",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Chart.js",
+      "Jinja2",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "OpenAPI",
+      "Swagger UI",
+      "Joblib",
+      "REST API",
+      "Git",
+      "GitHub"
+    ],
+
+    image: projectml,
+
+    tags: [
+      "Machine Learning",
+      "AutoML",
+      "Flask",
+      "Scikit-learn",
+      "Python",
+      "Artificial Intelligence",
+      "Data Science",
+      "Data Analytics",
+      "Model Training",
+      "Classification",
+      "Regression",
+      "REST API",
+      "OpenAPI",
+      "Swagger",
+      "Interactive Dashboard",
+      "Data Visualization",
+      "ML Pipeline",
+      "No-Code AI"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/Auto_ml_trainner",
+
+    videoUrl: "https://youtu.be/uBwmC7Y4zOQ?si=yF3sbY1qVd4Oxn3q",
+  },
+  {
+    title: "NestHaven - Modern Short-Term Accommodation Marketplace",
+    description:
+      "A full-stack accommodation booking platform with secure role-based access control, property management, booking workflows, and modern analytics dashboards built using React, Node.js, Express, and MySQL.",
+
+    summary:
+      "NestHaven is a production-ready Airbnb-inspired accommodation marketplace that enables guests to discover and book verified properties while empowering hosts to manage listings and reservations through an intuitive interface. The platform features secure JWT authentication, role-based access control, advanced property search, booking management, analytics dashboards, payment workflows, and a responsive modern UI built with React, Express.js, MySQL, and Tailwind CSS.",
+
+    details: [
+      "Designed and developed a complete full-stack accommodation marketplace supporting multiple user roles including Guests, Hosts, Administrators, Payment Managers, and Field Inspectors. Implemented secure JWT authentication, role-based authorization, protected APIs, property verification workflows, booking validation, and database integrity to provide a secure and scalable booking platform.",
+
+      "Built a premium user experience featuring advanced property browsing, location and price filtering, responsive property detail pages, booking management, reviews, personalized user dashboards, host management tools, revenue tracking, interactive analytics, and modern light/dark themes with a clean, responsive interface optimized for desktop and mobile devices.",
+
+      "Developed the backend using Node.js, Express.js, Sequelize ORM, and MySQL with RESTful APIs, secure middleware, image uploading, booking validation, role-based permissions, dashboard analytics, reporting modules, and optimized relational database architecture suitable for real-world accommodation marketplace deployment."
+    ],
+
+    features: [
+      "JWT Authentication & Authorization",
+      "Role-Based Access Control (RBAC)",
+      "Guest, Host & Admin Dashboards",
+      "Property Listing Management",
+      "Advanced Property Search",
+      "Location & Price Filtering",
+      "Secure Booking System",
+      "Property Verification Workflow",
+      "Booking History Management",
+      "Host Property Management",
+      "Revenue Analytics Dashboard",
+      "Interactive Charts & Reports",
+      "Image Upload System",
+      "Reviews & Ratings",
+      "Responsive Light & Dark Mode",
+      "RESTful API Architecture"
+    ],
+
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "React Router",
+      "Chart.js",
+      "Axios",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Sequelize ORM",
+      "JWT Authentication",
+      "Multer",
+      "REST API",
+      "Git",
+      "GitHub"
+    ],
+
+    image: projectnest,
+
+    tags: [
+      "Full Stack",
+      "React",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Sequelize",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "Accommodation Booking",
+      "Airbnb Clone",
+      "Property Management",
+      "Role-Based Access Control",
+      "Admin Dashboard",
+      "Responsive Design",
+      "REST API"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/NestHaven",
+
+    videoUrl: "https://youtu.be/oZ3Dq6uUb_M?si=i_DtAwVeD6FhIuj5"
+  },
+  {
+    title: "DocAnchor - AI Document Q&A Platform",
+    description:
+      "Production-ready AI-powered Document Intelligence Platform with Streamlit, Retrieval-Augmented Generation (RAG), Hybrid Search, OCR, SQLite Analytics, and Qdrant Vector Database.",
+
+    summary:
+      "A production-ready AI document intelligence platform that enables grounded question answering over uploaded documents and spreadsheets using Retrieval-Augmented Generation (RAG), hybrid semantic search, OCR, vector embeddings, and SQLite-powered tabular analytics. Built with Streamlit, Qdrant, BM25 retrieval, cross-encoder reranking, and support for both local LLMs and OpenAI models to deliver accurate, citation-backed responses with enterprise-grade knowledge management.",
+
+    details: [
+      "Designed and developed an enterprise-grade AI Document Intelligence platform that enables users to upload PDFs, Word documents, spreadsheets, scanned images, HTML, JSON, and other file formats into isolated workspaces. Implemented a complete Retrieval-Augmented Generation (RAG) pipeline with semantic embeddings, hybrid vector retrieval, BM25 search, OCR processing, citation validation, and evidence-based answer generation for trustworthy document question answering.",
+
+      "Implemented an intelligent knowledge management workflow featuring multi-format document ingestion, automated OCR for scanned documents, workspace isolation, Qdrant vector storage, SQLite-powered tabular analytics, hybrid retrieval, cross-encoder reranking, evaluation benchmarking, and citation-backed responses through an intuitive Streamlit dashboard supporting both local and cloud AI models.",
+
+      "Built using Python, Streamlit, Qdrant, SQLite, Sentence Transformers, BM25, Cross-Encoder Reranking, Tesseract OCR, Ollama, OpenAI API, and modern AI engineering practices. The platform follows a modular architecture with scalable retrieval pipelines, secure analytics, configurable AI providers, evaluation tools, and production-ready deployment for enterprise knowledge management and intelligent document search."
+    ],
+
+    features: [
+      "AI-Powered Document Question Answering",
+      "Retrieval-Augmented Generation (RAG)",
+      "Workspace-Based Knowledge Management",
+      "Hybrid Vector + BM25 Search",
+      "Grounded Answers with Citations",
+      "Automatic Citation Validation",
+      "Multi-Format Document Upload",
+      "OCR for Scanned PDFs & Images",
+      "SQLite Tabular Analytics",
+      "Qdrant Vector Database",
+      "Cross-Encoder Reranking",
+      "Semantic Search",
+      "Evaluation & Benchmark Lab",
+      "OpenAI & Local LLM Support",
+      "Interactive Streamlit Dashboard"
+    ],
+
+    technologies: [
+      "Python",
+      "Streamlit",
+      "Qdrant",
+      "SQLite",
+      "Sentence Transformers",
+      "BM25",
+      "Cross Encoder",
+      "Tesseract OCR",
+      "OpenAI API",
+      "Ollama",
+      "Transformers",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Git",
+      "GitHub"
+    ],
+
+    image: projectrag,
+
+    tags: [
+      "Artificial Intelligence",
+      "RAG",
+      "LLM",
+      "Document AI",
+      "Semantic Search",
+      "Qdrant",
+      "Vector Database",
+      "Streamlit",
+      "OCR",
+      "SQLite",
+      "Knowledge Management",
+      "Python"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/RAG-Chatbot",
+
+    videoUrl: "https://youtu.be/bKeF6HoBPMM?si=RXn50keft1snrAQf",
+  }
 ];
 
 export const ProjectsSection = () => {
