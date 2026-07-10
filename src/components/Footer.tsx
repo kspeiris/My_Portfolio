@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Youtube, Mail } from "lucide-react";
 
 const footerLinks = {
   navigation: [
@@ -20,6 +20,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: Github, url: "https://github.com/kspeiris", label: "GitHub" },
   { icon: Linkedin, url: "https://www.linkedin.com/in/kavindu-peiris-149375297", label: "LinkedIn" },
+  { icon: Youtube, url: "https://youtube.com/@kspeiris?si=BO6K4BxcRpBuO_fC", label: "YouTube" },
   { icon: Mail, url: "mailto:kavindup52@gmail.com", label: "Email" },
 ];
 

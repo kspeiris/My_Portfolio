@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, MapPin, Mail, Phone, Github, Linkedin, CheckCircle } from "lucide-react";
+import { Send, MapPin, Mail, Phone, Github, Linkedin, Youtube, CheckCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +13,7 @@ const contactInfo = [
 const socialLinks = [
   { icon: Github, label: "GitHub", url: "https://github.com/kspeiris" },
   { icon: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/kavindu-peiris-149375297" },
+  { icon: Youtube, label: "YouTube", url: "https://youtube.com/@kspeiris?si=BO6K4BxcRpBuO_fC" },
   { icon: Mail, label: "Email", url: "mailto:kavindup52@gmail.com" },
 ];
 

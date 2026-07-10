@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const socialLinks = [
   { icon: FaGithub, url: "https://github.com/kspeiris", label: "GitHub" },
   { icon: FaLinkedin, url: "https://www.linkedin.com/in/kavindu-peiris-149375297", label: "LinkedIn" },
-  { icon: FaEnvelope, url: "mailto:kavindup52@gmail.com", label: "Email" },
+  { icon: FaYoutube, url: "https://youtube.com/@kspeiris?si=BO6K4BxcRpBuO_fC", label: "YouTube" },
 ];
 
 export const SocialSidebar = () => {
