@@ -1,40 +1,41 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
+import blog1 from "@/assets/blog1.png";
+import blog2 from "@/assets/blog2.png";
+import blog3 from "@/assets/blog3.png";
 
 const blogs = [
   {
-    title: "How I Built CoordBotLab Guard",
+    title: "Why Most Software Projects Fail (It's Not Because of Bad Code)",
     description:
-      "A deep dive into building an AI-driven bot detection system using behavioral analysis and machine learning techniques.",
+      "Learn why software projects fail beyond coding mistakes.",
     image: blog1,
-    date: "June 2026",
-    readTime: "8 min read",
-    tags: ["Cybersecurity", "AI", "Bot Detection"],
-    link: "#",
+    date: "July 2026",
+    readTime: "9 min read",
+    tags: ["Software Engineering", "Project Management", "Architecture"],
+    link: "https://medium.com/@kavindup52/why-most-software-projects-fail-its-not-because-of-bad-code-1c9a660db249?sharedUserId=kavindup52",
   },
   {
-    title: "Transfer Learning Explained",
+    title: "Zero Trust Architecture for Modern Web Systems",
     description:
-      "Understanding Transfer Learning with EfficientNetB0 and how to achieve 94% accuracy on custom image classification tasks.",
+      "Discover Zero Trust principles for securing modern applications.",
     image: blog2,
-    date: "May 2026",
-    readTime: "7 min read",
-    tags: ["Machine Learning", "Deep Learning", "TensorFlow"],
-    link: "#",
+    date: "June 2026",
+    readTime: "12 min read",
+    tags: ["Cybersecurity", "Cloud Security", "Zero Trust"],
+    link: "https://medium.com/@kavindup52/zero-trust-architecture-for-modern-web-systems-48a919003e91?sharedUserId=kavindup52",
   },
   {
-    title: "Secure REST APIs for Developers",
+    title:
+      "From Monoliths to Microservices: How Modern Companies Build Scalable Backend Systems",
     description:
-      "Best practices for building secure REST APIs including authentication, authorization, and common security vulnerabilities.",
+      "Understand how microservices power scalable enterprise systems.",
     image: blog3,
-    date: "April 2026",
-    readTime: "6 min read",
-    tags: ["Backend", "Security", "REST APIs"],
-    link: "#",
+    date: "July 2026",
+    readTime: "9 min read",
+    tags: ["Microservices", "Backend", "System Design"],
+    link: "https://medium.com/@kavindup52/from-monoliths-to-microservices-how-modern-companies-build-scalable-backend-systems-76847b85f0eb?sharedUserId=kavindup52",
   },
 ];
 
