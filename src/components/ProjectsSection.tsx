@@ -36,6 +36,9 @@ import projectslice from "@/assets/projectslice.png";
 import projectml from "@/assets/projectml.png";
 import projectnest from "@/assets/projectnest.png";
 import projectrag from "@/assets/projectrag.png";
+import projectheart from "@/assets/projectheart.png";
+import projectsmart from "@/assets/projectsmart.png";
+import projectre from "@/assets/projectre.png";
 
 type Project = {
   title: string;
@@ -948,7 +951,7 @@ const projects: Project[] = [
       "Security Research"
     ],
     githubUrl: "https://github.com/kspeiris/CoordBotLab---Study",
-    videoUrl: "https://youtube.com/@kspeiris?si=muPw-FhJK7g7S4FU",
+    videoUrl: "https://youtu.be/kB5KnnMr8zs?si=aCwwDZOTdK2OR8dr",
   },
   {
     title: "Svems Photographer",
@@ -1252,7 +1255,227 @@ const projects: Project[] = [
     githubUrl: "https://github.com/kspeiris/RAG-Chatbot",
 
     videoUrl: "https://youtu.be/bKeF6HoBPMM?si=RXn50keft1snrAQf",
+  },
+  {
+    title: "Heart Attack Prediction System",
+    description:
+      "Machine Learning-powered Heart Attack Risk Prediction Web Application built with Flask, Logistic Regression, scikit-learn, and Bootstrap.",
+    summary:
+      "A production-ready clinical decision-support web application that predicts heart attack risk using a trained Logistic Regression model. The system combines an intuitive Bootstrap-based interface, Flask REST services, feature engineering, input validation, and probability-based risk classification to deliver real-time cardiovascular risk assessments with actionable health insights.",
+    details: [
+      "Designed and developed an end-to-end Heart Attack Prediction System that collects structured patient health information, validates clinical inputs, generates derived cardiovascular metrics, preprocesses data using a trained Standard Scaler, and predicts heart attack risk using a Logistic Regression machine learning model for educational clinical decision support.",
+      "Implemented a responsive Flask web application with interactive patient forms, backend validation, feature engineering, REST API endpoints, probability-based risk scoring, multiple risk categories (Low, Moderate, High, Very High), health monitoring endpoints, and informative result dashboards to improve usability and interpretability.",
+      "Built using Python, Flask, scikit-learn, NumPy, Bootstrap, HTML, CSS, JavaScript, and Joblib with a modular architecture supporting trained model deployment, preprocessing pipelines, scalable REST APIs, production-ready server deployment, and clean UI/UX for healthcare analytics demonstrations."
+    ],
+    features: [
+      "Heart Attack Risk Prediction",
+      "Machine Learning Inference",
+      "Logistic Regression Model",
+      "Clinical Data Validation",
+      "Feature Engineering Pipeline",
+      "Real-Time Risk Assessment",
+      "Probability-Based Risk Scoring",
+      "Multiple Risk Level Classification",
+      "Interactive Patient Assessment Form",
+      "RESTful Prediction API",
+      "Health Check Endpoint",
+      "Bootstrap Responsive UI",
+      "Model & Scaler Integration",
+      "Derived Clinical Metrics",
+      "Production-Ready Flask Deployment"
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "Flask-CORS",
+      "scikit-learn",
+      "NumPy",
+      "Joblib",
+      "Logistic Regression",
+      "StandardScaler",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap 5",
+      "Font Awesome",
+      "Waitress",
+      "Gunicorn",
+      "Git",
+      "GitHub"
+    ],
+    image: projectheart,
+    tags: [
+      "Machine Learning",
+      "Healthcare AI",
+      "Heart Disease Prediction",
+      "Flask",
+      "Python",
+      "scikit-learn",
+      "Logistic Regression",
+      "Bootstrap",
+      "Clinical Decision Support",
+      "Predictive Analytics",
+      "REST API",
+      "Healthcare"
+    ],
+    githubUrl: "https://github.com/kspeiris/Hart_prediction_ml",
+    videoUrl: "https://youtu.be/E1cOyAr2lRg?si=CftJsCZDvyymUh6C",
+  },
+  {
+    title: "SmartBlog",
+    description:
+      "Full-stack Publishing Platform built with React, Vite, Express, MongoDB, Socket.IO, and Tailwind CSS for modern content creation and editorial workflows.",
+
+    summary:
+      "A production-ready full-stack blogging platform that streamlines modern digital publishing through AI-assisted writing, real-time collaboration, content moderation, analytics, newsletters, premium memberships, and enterprise administration. The platform integrates a React frontend, Express REST APIs, MongoDB persistence, Socket.IO real-time communication, and scalable backend services to deliver a complete publishing ecosystem for creators and organizations.",
+
+    details: [
+      "Designed and developed a comprehensive blogging platform that enables users to create, edit, schedule, publish, and manage articles while supporting AI-assisted writing, content revisions, rich media uploads, personalized feeds, advanced search, comments, likes, bookmarks, and follow systems to enhance user engagement and content discovery.",
+
+      "Implemented a scalable Express backend with RESTful APIs, JWT authentication, real-time Socket.IO notifications, MongoDB data management, newsletter broadcasting, analytics dashboards, premium content monetization, moderation workflows, collaboration workspaces, and enterprise administration features, providing a secure and production-ready publishing environment.",
+
+      "Built using React, Vite, Tailwind CSS, Node.js, Express, MongoDB, Mongoose, Socket.IO, JWT, Axios, and Nodemailer with a modular service-oriented architecture supporting real-time communication, SEO optimization, role-based access control, workflow automation, API-driven integrations, and cloud-ready deployment for modern digital publishing platforms."
+    ],
+
+    features: [
+      "AI-Assisted Content Writing",
+      "Rich Blog Publishing",
+      "Draft & Scheduled Publishing",
+      "Post Revision History",
+      "Real-Time Notifications",
+      "Comments & Likes System",
+      "Bookmarks & Reading Lists",
+      "Follow & Personalized Feed",
+      "Advanced Search & Filtering",
+      "Author Analytics Dashboard",
+      "Newsletter Management",
+      "Premium Membership & Monetization",
+      "Collaboration Workspaces",
+      "Content Moderation Dashboard",
+      "Enterprise Administration"
+    ],
+
+    technologies: [
+      "React 18",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT Authentication",
+      "Socket.IO",
+      "Axios",
+      "Nodemailer",
+      "Multer",
+      "Git",
+      "GitHub"
+    ],
+
+    image: projectsmart,
+
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Full Stack",
+      "Blog Platform",
+      "Content Management",
+      "Publishing",
+      "Socket.IO",
+      "Tailwind CSS",
+      "JWT Authentication",
+      "REST API"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/SmartBlog",
+
+    videoUrl: "https://youtu.be/tPQjKCwGi40?si=yDDZn1QMTrrPc9sf",
+  },
+  {
+    title: "AI Resume Analyzer",
+
+    description:
+      "AI-powered Resume Analysis and ATS Optimization Platform built with React, Material UI, Firebase, Recharts, and intelligent resume parsing for ATS scoring, keyword matching, and personalized career recommendations.",
+
+    summary:
+      "A modern full-stack AI Resume Analyzer that helps job seekers optimize resumes for Applicant Tracking Systems (ATS). The platform provides intelligent resume parsing, keyword gap analysis, semantic matching, AI-powered recommendations, job description comparison, performance analytics, and interactive dashboards through a responsive Material UI interface with Firebase authentication and cloud storage.",
+
+    details: [
+      "Designed and developed a complete AI-powered resume optimization platform that allows users to upload resumes, compare them against job descriptions, evaluate ATS compatibility, identify missing keywords, analyze semantic relevance, and receive personalized recommendations to improve interview success while maintaining an intuitive and responsive user experience.",
+
+      "Implemented a scalable React application featuring Firebase Authentication, Firestore integration, resume upload and parsing, ATS scoring algorithms, keyword extraction, semantic analysis, interactive dashboards, analytics visualization with Recharts, history management, profile management, dark/light theme support, and exportable analysis reports for comprehensive resume optimization.",
+
+      "Built using React, Material UI, Firebase, JavaScript, Recharts, Framer Motion, PDF parsing libraries, and modern frontend architecture with reusable components, secure authentication, cloud synchronization, responsive design, and production-ready deployment supporting intelligent resume analysis and career development."
+    ],
+
+    features: [
+      "AI Resume Analysis",
+      "ATS Compatibility Scoring",
+      "Resume Upload & Parsing",
+      "PDF & DOCX Support",
+      "Job Description Matching",
+      "Keyword Match Analysis",
+      "Missing Keyword Detection",
+      "Semantic Resume Evaluation",
+      "AI Resume Recommendations",
+      "Resume Improvement Suggestions",
+      "Impact & Formatting Analysis",
+      "Interactive Analytics Dashboard",
+      "Performance History Tracking",
+      "Score Progress Visualization",
+      "Resume Export & Sharing",
+      "Firebase Authentication",
+      "Cloud Firestore Integration",
+      "Profile Management",
+      "Dark & Light Theme",
+      "Responsive Material UI Interface"
+    ],
+
+    technologies: [
+      "React 18",
+      "JavaScript",
+      "Material UI (MUI)",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "React Router",
+      "Recharts",
+      "Framer Motion",
+      "PDF.js",
+      "Mammoth.js",
+      "HTML5",
+      "CSS3",
+      "Local Storage",
+      "Git",
+      "GitHub"
+    ],
+
+    image: projectre,
+
+    tags: [
+      "Artificial Intelligence",
+      "Resume Analyzer",
+      "ATS Optimization",
+      "React",
+      "Material UI",
+      "Firebase",
+      "Resume Parsing",
+      "Keyword Analysis",
+      "Career Platform",
+      "Job Matching",
+      "Dashboard",
+      "Recharts",
+      "Frontend Development",
+      "Cloud Application"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/ai-resume-analyzer",
+
+    videoUrl: "https://youtu.be/RDcFRHKVIzM?si=34Q7QH6xWUpPYXOJ",
   }
+
 ];
 
 export const ProjectsSection = () => {
