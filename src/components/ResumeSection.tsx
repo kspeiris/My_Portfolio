@@ -114,12 +114,19 @@ const researchJourney = [
 ];
 
 const certifications = [
-  "AWS – Fundamentals of Machine Learning & Artificial Intelligence",
-  "AI/ML Engineer Stage 2 – SLIIT",
+  "AI/ML Engineer – Stage 2 – SLIIT",
+  "AWS Cloud Practitioner Essentials – AWS",
+  "Introduction to Cybersecurity – Cisco Networking Academy",
+  "AI/ML Engineer – Stage 1 – SLIIT",
+  "Junior Security Operations Center (JSOC) – Vibe Security",
+  "Full-Stack Deep Learning with Python – LinkedIn Learning",
+  "Fundamentals of Machine Learning and Artificial Intelligence – AWS",
+  "Machine Learning Pipelines with Azure ML Studio – Coursera",
+  "Deep Learning with PyTorch: Image Segmentation – Coursera",
+  "Data Science & Analytics – HP LIFE",
+  "Natural Language Processing (NLP) and Text Mining Tutorial for Beginners – Great Learning Academy",
   "Python Programming – University of Moratuwa",
-  "Cisco – Introduction to Cybersecurity",
-  "LinkedIn Learning – Full-Stack Deep Learning with Python",
-  "LinkedIn Learning – RAG, AI Apps & AI Agents",
+  ".NET UI Big Picture: Desktop, ASP.NET and Cross-Platform – LinkedIn Learning",
 ];
 
 export const ResumeSection = () => {
