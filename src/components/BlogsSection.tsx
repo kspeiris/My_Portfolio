@@ -134,8 +134,10 @@ export const BlogsSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Button variant="heroOutline" size="lg">
-            View All Articles
+          <Button variant="heroOutline" size="lg" asChild>
+            <a href="https://medium.com/@kavindup52" target="_blank" rel="noopener noreferrer">
+              View All Articles
+            </a>
           </Button>
         </motion.div>
       </div>
