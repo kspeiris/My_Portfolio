@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp, ExternalLink, Github } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, Github, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -54,6 +54,7 @@ type Project = {
   tags: string[];
   githubUrl: string;
   videoUrl: string;
+  isFreelance?: boolean;
 };
 
 // Helper to extract YouTube embed URL with autoplay
@@ -127,6 +128,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/kspeiris/stock-control-system-for-JFI-CONSOLIDATED",
     videoUrl: "https://youtu.be/fg826iYrKYA?si=VKQru--18oXXtsK_",
+    isFreelance: true,
   },
   {
     title: "Bio Care Sales Management System",
@@ -182,6 +184,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/kspeiris/sales-management-system-for-Bio-Care-Consumers",
     videoUrl: "https://youtu.be/rjw6-aeIzKU?si=doNgIX3DxNLFnvHk",
+    isFreelance: true,
   },
   {
     title: "Student Success Platform",
@@ -307,6 +310,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/kspeiris/salesperson_mobile_app",
     videoUrl: "https://youtu.be/6LaDM1erCUU?si=pkP4OnbYOAzgfOMR",
+    isFreelance: true,
   },
   {
     title: "AI-Driven Employee Layoff Risk Prediction System",
@@ -1660,6 +1664,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/kspeiris/biocare-web",
 
     videoUrl: "https://youtu.be/DnL_yyfsaOo?si=d-2of5gKMbNbVBmp",
+    isFreelance: true,
   },
   {
     title: "Developer Behavior Analytics Tool (DBAT)",
@@ -1835,6 +1840,14 @@ export const ProjectsSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
 
+                  {project.isFreelance && (
+                    <div className="absolute top-3 right-3 z-10 transition-opacity duration-300 group-hover:opacity-0">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-zinc-950/80 text-amber-400 border border-amber-500/30 backdrop-blur-md shadow-md shadow-black/40">
+                        <Briefcase className="w-3 h-3" /> Freelance
+                      </span>
+                    </div>
+                  )}
+
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/50 backdrop-blur-sm">
                     <Button
                       variant="hero"
@@ -1935,8 +1948,13 @@ export const ProjectsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-transparent to-cyan-400/10" />
                 <div className="relative p-5 sm:p-6 lg:p-8">
                   <DialogHeader className="pr-8">
-                    <DialogTitle className="text-2xl font-bold">
-                      {selectedProject.title}
+                    <DialogTitle className="text-2xl font-bold flex flex-wrap items-center gap-3">
+                      <span>{selectedProject.title}</span>
+                      {selectedProject.isFreelance && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20 shadow-[0_0_15px_rgba(245,158,11,0.05)]">
+                          <Briefcase className="w-3.5 h-3.5" /> Freelance Project
+                        </span>
+                      )}
                     </DialogTitle>
                   </DialogHeader>
                 </div>
