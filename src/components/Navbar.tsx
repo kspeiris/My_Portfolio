@@ -17,7 +17,7 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
-const CV_PATH = "/cv.pdf";
+const CV_PATH = "/Kavindu_Peiris_CV.pdf";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
