@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
-  { icon: MapPin, label: "Location", value: "Sri Lanka" },
+  { icon: MapPin, label: "Location", value: "Panadura, Sri Lanka" },
   { icon: Mail, label: "Email", value: "kavindup52@gmail.com" },
   { icon: Phone, label: "Phone", value: "+94 71 930 4472" },
 ];
@@ -129,8 +129,8 @@ export const ContactSection = () => {
                     <div className="relative">
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "name" || formData.name
-                            ? "text-xs text-primary -top-2 bg-card px-2"
-                            : "text-muted-foreground top-4"
+                          ? "text-xs text-primary -top-2 bg-card px-2"
+                          : "text-muted-foreground top-4"
                           }`}
                       >
                         Your Name
@@ -150,8 +150,8 @@ export const ContactSection = () => {
                     <div className="relative">
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "email" || formData.email
-                            ? "text-xs text-primary -top-2 bg-card px-2"
-                            : "text-muted-foreground top-4"
+                          ? "text-xs text-primary -top-2 bg-card px-2"
+                          : "text-muted-foreground top-4"
                           }`}
                       >
                         Your Email
@@ -171,8 +171,8 @@ export const ContactSection = () => {
                     <div className="relative">
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "message" || formData.message
-                            ? "text-xs text-primary -top-2 bg-card px-2"
-                            : "text-muted-foreground top-4"
+                          ? "text-xs text-primary -top-2 bg-card px-2"
+                          : "text-muted-foreground top-4"
                           }`}
                       >
                         Your Message
