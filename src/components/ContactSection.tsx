@@ -121,7 +121,7 @@ export const ContactSection = () => {
                   <motion.form
                     key="form"
                     onSubmit={handleSubmit}
-                    className="space-y-6"
+                    className="space-y-8"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -129,10 +129,11 @@ export const ContactSection = () => {
                     {/* Name Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "name" || formData.name
-                          ? "text-xs text-primary -top-2 bg-card px-2"
-                          : "text-muted-foreground top-4"
-                          }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
+                          focusedField === "name" || formData.name
+                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            : "text-muted-foreground top-4"
+                        }`}
                       >
                         Your Name
                       </motion.label>
@@ -142,7 +143,7 @@ export const ContactSection = () => {
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full bg-card/50 border border-border rounded-xl px-4 py-4 focus:outline-none focus:border-primary transition-colors"
+                        className="w-full h-14 bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all"
                         required
                       />
                     </div>
@@ -150,10 +151,11 @@ export const ContactSection = () => {
                     {/* Email Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "email" || formData.email
-                          ? "text-xs text-primary -top-2 bg-card px-2"
-                          : "text-muted-foreground top-4"
-                          }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
+                          focusedField === "email" || formData.email
+                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            : "text-muted-foreground top-4"
+                        }`}
                       >
                         Your Email
                       </motion.label>
@@ -163,7 +165,7 @@ export const ContactSection = () => {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full bg-card/50 border border-border rounded-xl px-4 py-4 focus:outline-none focus:border-primary transition-colors"
+                        className="w-full h-14 bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all"
                         required
                       />
                     </div>
@@ -171,10 +173,11 @@ export const ContactSection = () => {
                     {/* Message Field */}
                     <div className="relative">
                       <motion.label
-                        className={`absolute left-4 transition-all duration-200 pointer-events-none ${focusedField === "message" || formData.message
-                          ? "text-xs text-primary -top-2 bg-card px-2"
-                          : "text-muted-foreground top-4"
-                          }`}
+                        className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
+                          focusedField === "message" || formData.message
+                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            : "text-muted-foreground top-4"
+                        }`}
                       >
                         Your Message
                       </motion.label>
@@ -183,8 +186,8 @@ export const ContactSection = () => {
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         onFocus={() => setFocusedField("message")}
                         onBlur={() => setFocusedField(null)}
-                        rows={5}
-                        className="w-full bg-card/50 border border-border rounded-xl px-4 py-4 focus:outline-none focus:border-primary transition-colors resize-none"
+                        rows={4}
+                        className="w-full bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-[18px] focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all resize-none"
                         required
                       />
                     </div>
