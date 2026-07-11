@@ -17,10 +17,12 @@ const floatingIcons = [
 ];
 
 const roles = [
-  "Software Engineering Undergraduate",
-  "AI & Machine Learning Researcher",
-  "Cybersecurity Enthusiast",
-  "Backend Developer",
+  "Software Engineer",
+  "AI Engineer",
+  "Machine Learning Enthusiast",
+  "Cybersecurity Researcher",
+  "Open Source Contributor",
+  "Research Author",
 ];
 
 function useTypewriter(
@@ -79,17 +81,16 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-16 lg:py-0"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.15)_0%,transparent_70%)]" />
       </div>
 
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
-          className="absolute text-3xl md:text-4xl opacity-20"
+          className="absolute text-3xl md:text-4xl opacity-35 hidden md:block"
           style={{ left: item.x, top: item.y }}
           animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
           transition={{
@@ -105,7 +106,7 @@ export const HeroSection = () => {
 
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
@@ -113,7 +114,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative w-64 h-64 lg:w-80 lg:h-80">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent blur-2xl opacity-30 animate-pulse" />
 
               <motion.div
@@ -138,7 +139,7 @@ export const HeroSection = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.6, type: "spring" }}
-                className="absolute bottom-4 right-4 bg-card/90 backdrop-blur border border-border rounded-full px-4 py-2 flex items-center gap-2"
+                className="absolute bottom-4 -right-2 bg-card/90 backdrop-blur border border-border rounded-full px-4 py-2 flex items-center gap-2 shadow-xl shadow-black/50"
               >
                 <span className="w-2 h-2 bg-success rounded-full animate-pulse" />
                 <span className="text-sm font-medium">Available</span>
@@ -151,16 +152,21 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
+              className="mb-4"
             >
-              Hi, I'm <span className="gradient-text">Kavindu Peiris</span>
+              <span className="text-2xl md:text-3xl lg:text-4xl text-foreground font-medium block mb-1">
+                Hi, I'm
+              </span>
+              <span className="gradient-text text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold block">
+                Kavindu Peiris
+              </span>
             </motion.h1>
  
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-primary font-medium mb-4"
+              className="text-lg md:text-xl text-primary font-medium mb-4 mt-5 md:mt-6"
             >
               <span className="relative inline-flex items-center leading-none h-[1.6em]">
                 <span className="invisible whitespace-nowrap">{placeholder}</span>
@@ -181,7 +187,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-muted-foreground text-lg max-w-2xl mb-8"
+              className="text-muted-foreground text-lg max-w-xs md:max-w-xl lg:max-w-[620px] mx-auto lg:mx-0 mb-8"
             >
               Building secure, intelligent software systems through Software Engineering,
               Artificial Intelligence, Machine Learning, and Cybersecurity research.
@@ -195,18 +201,16 @@ export const HeroSection = () => {
             >
               <Button
                 variant="hero"
-                size="xl"
                 onClick={() => scrollToSection("#projects")}
-                className="gap-2"
+                className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 group"
               >
-                View Projects <ExternalLink className="w-5 h-5" />
+                View Projects <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Button>
  
               <Button
                 variant="heroOutline"
-                size="xl"
                 onClick={() => scrollToSection("#contact")}
-                className="gap-2"
+                className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 hover:bg-primary/20 hover:text-blue-400"
               >
                 <Mail className="w-5 h-5" />
                 Contact Me
@@ -217,19 +221,26 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
-              className="mt-12 flex items-center justify-center lg:justify-start gap-10"
+              className="mt-12 flex items-center justify-center lg:justify-start gap-16 lg:gap-12"
             >
-              <div className="text-center">
+              <div className="text-center lg:text-left">
                 <div className="text-4xl font-bold gradient-text">30+</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  Projects Completed
+                  Projects
                 </div>
               </div>
 
-              <div className="text-center">
+              <div className="text-center lg:text-left">
                 <div className="text-4xl font-bold gradient-text">10+</div>
                 <div className="text-sm text-muted-foreground mt-1">
                   Tech Stacks
+                </div>
+              </div>
+
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold gradient-text">40+</div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  Articles
                 </div>
               </div>
             </motion.div>
@@ -241,7 +252,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden lg:flex"
       >
         <motion.button
           onClick={() => scrollToSection("#services")}
