@@ -39,6 +39,9 @@ import projectrag from "@/assets/projectrag.png";
 import projectheart from "@/assets/projectheart.png";
 import projectsmart from "@/assets/projectsmart.png";
 import projectre from "@/assets/projectre.png";
+import projecterp from "@/assets/projecterp.png";
+import projectbio from "@/assets/projectbio.png";
+import projectdbat from "@/assets/projectdbat.png";
 
 type Project = {
   title: string;
@@ -1474,6 +1477,297 @@ const projects: Project[] = [
     githubUrl: "https://github.com/kspeiris/ai-resume-analyzer",
 
     videoUrl: "https://youtu.be/RDcFRHKVIzM?si=34Q7QH6xWUpPYXOJ",
+  },
+  {
+    title: "ManufacturingERP Desktop Solution",
+
+    description:
+      "Production-ready Manufacturing ERP Desktop Application built with C#, .NET 8, WPF (MVVM), Entity Framework Core, SQLite, and Material Design for inventory management, production planning, sales, accounting, and business analytics.",
+
+    summary:
+      "A comprehensive desktop-based Enterprise Resource Planning (ERP) solution designed for small and medium-sized manufacturing businesses. The application integrates inventory management, warehouse operations, production planning, POS and vehicle sales, customer and supplier management, accounting, collections, financial reporting, and executive analytics into a single Clean Architecture platform with a modern Material Design interface.",
+
+    details: [
+      "Designed and developed a complete Manufacturing ERP desktop application that centralizes core business operations including inventory control, warehouse management, production workflows, customer management, supplier management, sales processing, collections, accounting, and executive reporting through an intuitive WPF-based user interface.",
+
+      "Implemented a scalable enterprise desktop architecture using Clean Architecture and MVVM principles with Entity Framework Core and SQLite, featuring executive dashboards, business analytics, POS sales, vehicle distribution, inventory tracking, production costing, double-entry accounting, trial balance generation, role-based administration, audit logging, and comprehensive reporting modules.",
+
+      "Built using C#, .NET 8, WPF, Entity Framework Core, SQLite, Material Design, and CommunityToolkit.MVVM with reusable components, responsive desktop layouts, modern UI/UX, secure local data management, maintainable architecture, and production-ready workflows suitable for manufacturing and distribution businesses."
+    ],
+
+    features: [
+      "Executive Dashboard",
+      "Business Analytics",
+      "Sales Performance Dashboard",
+      "Inventory Management",
+      "Warehouse Management",
+      "Inventory Valuation",
+      "Product Management",
+      "Customer Management",
+      "Supplier Management",
+      "POS Sales",
+      "Vehicle Sales",
+      "Route Distribution",
+      "Collections Management",
+      "Production Management",
+      "Production Costing",
+      "Accounting Workspace",
+      "Journal Entries",
+      "Chart of Accounts",
+      "General Ledger",
+      "Trial Balance",
+      "Receivables & Payables",
+      "Working Capital Analysis",
+      "Business Reports",
+      "Audit Logs",
+      "User Management",
+      "Role-Based Access Control",
+      "Database Explorer",
+      "Material Design UI",
+      "Offline Desktop Operation",
+      "SQLite Local Database"
+    ],
+
+    technologies: [
+      "C#",
+      ".NET 8",
+      "WPF",
+      "MVVM",
+      "CommunityToolkit.MVVM",
+      "Entity Framework Core",
+      "SQLite",
+      "Material Design in XAML",
+      "XAML",
+      "LINQ",
+      "Clean Architecture",
+      "Dependency Injection",
+      "Observable Collections",
+      "Git",
+      "GitHub",
+      "Visual Studio 2022"
+    ],
+
+    image: projecterp,
+
+    tags: [
+      "ERP",
+      "Manufacturing ERP",
+      "Desktop Application",
+      "C#",
+      ".NET 8",
+      "WPF",
+      "MVVM",
+      "Entity Framework Core",
+      "SQLite",
+      "Inventory Management",
+      "Production Management",
+      "Accounting",
+      "Warehouse Management",
+      "Business Analytics",
+      "Material Design",
+      "Clean Architecture"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/Manufacturing_ERP",
+
+    videoUrl: "https://youtu.be/E226Drb6tWQ?si=Ijur9qMN8aHUyJdn",
+  },
+  {
+    title: "Bio Care Company Website",
+
+    description:
+      "Modern corporate website and product inquiry platform built with React 18, Vite, Tailwind CSS, React Router, and Lucide React for showcasing functional beverages, managing product catalogs, and handling customer and business inquiries.",
+
+    summary:
+      "A responsive single-page corporate website developed for Bio Care, a Sri Lankan functional beverage manufacturer. The platform provides a professional digital presence with company information, product showcases, certification highlights, inquiry management, and contact services through a modern React-based architecture featuring reusable components, responsive UI, and optimized user experience.",
+
+    details: [
+      "Designed and developed a complete corporate website that showcases the company's products, brand identity, certifications, production capacity, business milestones, and company information while providing an engaging user experience through modern responsive design and reusable React components.",
+
+      "Implemented a fully responsive React SPA featuring dynamic product catalogs, product detail modals, company overview pages, certification showcase, contact management, and dedicated inquiry workflows for customers, distributors, business partners, and bulk order requests using React Router, Tailwind CSS, and reusable UI components.",
+
+      "Built using React 18, Vite, Tailwind CSS, React Router DOM, and Lucide React with component-based architecture, responsive layouts, optimized performance, interactive product browsing, modern UI/UX, clean code organization, and scalable frontend architecture suitable for enterprise business websites."
+    ],
+
+    features: [
+      "Responsive Corporate Website",
+      "Modern Landing Page",
+      "Company Profile",
+      "About Us Page",
+      "Product Catalog",
+      "Product Detail Modal",
+      "Featured Products",
+      "Product Categories",
+      "Certification Showcase",
+      "Company Statistics",
+      "Business Milestones",
+      "Production Capacity Display",
+      "Bulk Order Inquiry",
+      "Business Partnership Inquiry",
+      "Distributor Inquiry",
+      "Product Inquiry Form",
+      "General Contact Form",
+      "Contact Information",
+      "Business Hours",
+      "Responsive Navigation",
+      "SPA Routing",
+      "Interactive UI Components",
+      "Reusable Component Architecture",
+      "Tailwind CSS Design System",
+      "Mobile Responsive Layout",
+      "Modern UI/UX"
+    ],
+
+    technologies: [
+      "React 18",
+      "JavaScript",
+      "Vite",
+      "React Router DOM",
+      "Tailwind CSS",
+      "Lucide React",
+      "HTML5",
+      "CSS3",
+      "JSX",
+      "Responsive Design",
+      "Component-Based Architecture",
+      "SPA Architecture",
+      "Git",
+      "GitHub",
+      "Netlify"
+    ],
+
+    image: projectbio,
+
+    tags: [
+      "React",
+      "Corporate Website",
+      "Company Website",
+      "Business Website",
+      "Product Catalog",
+      "React SPA",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Responsive Design",
+      "Frontend Development",
+      "UI/UX",
+      "Product Showcase",
+      "Inquiry Management",
+      "Modern Web Design",
+      "Netlify"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/biocare-web",
+
+    videoUrl: "https://youtu.be/DnL_yyfsaOo?si=d-2of5gKMbNbVBmp",
+  },
+  {
+    title: "Developer Behavior Analytics Tool (DBAT)",
+
+    description:
+      "Cross-platform desktop Git analytics application built with Electron, React, TypeScript, Vite, Tailwind CSS, SQLite, and Recharts for analyzing local Git repositories and GitHub developer activity through interactive dashboards and repository insights.",
+
+    summary:
+      "A modern desktop analytics platform designed for software developers to visualize coding activity, repository health, and productivity metrics. DBAT combines local Git repository analysis with GitHub integration to deliver interactive dashboards, commit analytics, code churn visualization, language statistics, activity timelines, and exportable reports within a fast Electron-powered desktop application.",
+
+    details: [
+      "Designed and developed a full-featured desktop analytics application that provides actionable insights into developer productivity by analyzing Git repositories, commit history, code churn, activity timelines, language distribution, and repository statistics through an intuitive dashboard with multiple visualizations.",
+
+      "Implemented comprehensive repository analytics supporting both local Git repositories and GitHub accounts, including commit history analysis, code churn tracking, productivity metrics, activity heatmaps, language breakdown, top modified files, longest coding streaks, focus sessions, repository management, and Markdown report generation using Electron IPC, SQLite storage, and GitHub API integration.",
+
+      "Built using Electron, React, TypeScript, Vite, Tailwind CSS, Recharts, and better-sqlite3 with secure Electron architecture, component-based frontend, responsive desktop UI, theme customization, efficient data visualization, reusable components, local persistence, and scalable analytics architecture optimized for developer productivity."
+    ],
+
+    features: [
+      "Desktop Git Analytics Dashboard",
+      "Local Git Repository Analysis",
+      "GitHub Account Analytics",
+      "Interactive Dashboard",
+      "Commit Activity Timeline",
+      "Code Churn Analysis",
+      "Developer Productivity Metrics",
+      "Impact Score Calculation",
+      "Longest Coding Streak",
+      "Active Days Tracking",
+      "Focus Session Analytics",
+      "Weekend Activity Ratio",
+      "Most Productive Time Detection",
+      "Language Distribution Analysis",
+      "Repository Statistics",
+      "Top Modified Files",
+      "Insertions & Deletions Tracking",
+      "Interactive Charts",
+      "Saved Projects",
+      "Recent Repository History",
+      "Repository Browser",
+      "Date Range Filtering",
+      "Markdown Report Export",
+      "SQLite Local Storage",
+      "Multiple Theme Support",
+      "Light Theme",
+      "Dark Theme",
+      "Forest Theme",
+      "Midnight Theme",
+      "System Theme Detection",
+      "Responsive Desktop UI",
+      "Secure Electron IPC",
+      "GitHub API Integration",
+      "Reusable Component Architecture"
+    ],
+
+    technologies: [
+      "Electron",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Recharts",
+      "better-sqlite3",
+      "SQLite",
+      "Git",
+      "GitHub API",
+      "Node.js",
+      "Electron IPC",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Component-Based Architecture",
+      "Desktop Application Development",
+      "Data Visualization",
+      "GitHub",
+      "Markdown"
+    ],
+
+    image: projectdbat,
+
+    tags: [
+      "Electron",
+      "Desktop Application",
+      "Git Analytics",
+      "GitHub Analytics",
+      "Developer Tools",
+      "Code Analytics",
+      "Developer Productivity",
+      "Repository Analysis",
+      "React",
+      "TypeScript",
+      "SQLite",
+      "Tailwind CSS",
+      "Recharts",
+      "Data Visualization",
+      "Software Engineering",
+      "GitHub API",
+      "Cross Platform",
+      "Desktop Dashboard",
+      "Developer Dashboard",
+      "Open Source"
+    ],
+
+    githubUrl:
+      "https://github.com/kspeiris/Developer-Behavior-Analytics-Tool",
+
+    videoUrl:
+      "https://youtu.be/cS4adpz_Zf0?si=YwV1oDDA70sknNkS"
   }
 
 ];
