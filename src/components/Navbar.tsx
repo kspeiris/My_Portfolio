@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Download, ChevronRight } from "lucide-react";
+import { Menu, X, Download, ChevronRight, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -23,6 +24,12 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,7 +123,20 @@ export const Navbar = () => {
               })}
             </div>
 
-            <div className="hidden xl:block">
+            <div className="hidden xl:flex items-center gap-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="text-foreground hover:bg-secondary/50 rounded-xl"
+                aria-label="Toggle theme"
+              >
+                {mounted && theme === "dark" ? (
+                  <Sun className="w-[1.2rem] h-[1.2rem] text-yellow-500" />
+                ) : (
+                  <Moon className="w-[1.2rem] h-[1.2rem] text-indigo-500" />
+                )}
+              </Button>
               <Button asChild variant="hero" size="default" className="gap-2 hover:shadow-primary/40 shadow-md">
                 <a href={CV_PATH} download>
                   <span className="text-base">⬇</span>
@@ -125,17 +145,32 @@ export const Navbar = () => {
               </Button>
             </div>
 
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="xl:hidden p-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            <div className="flex items-center gap-2 xl:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="text-foreground hover:bg-secondary/50 rounded-xl"
+                aria-label="Toggle theme"
+              >
+                {mounted && theme === "dark" ? (
+                  <Sun className="w-[1.2rem] h-[1.2rem] text-yellow-500" />
+                ) : (
+                  <Moon className="w-[1.2rem] h-[1.2rem] text-indigo-500" />
+                )}
+              </Button>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors"
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>

@@ -131,7 +131,7 @@ export const ContactSection = () => {
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
                           focusedField === "name" || formData.name
-                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            ? "text-xs text-primary -top-2.5 bg-background px-2"
                             : "text-muted-foreground top-4"
                         }`}
                       >
@@ -143,7 +143,7 @@ export const ContactSection = () => {
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full h-14 bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all"
+                        className="w-full h-14 bg-background/50 dark:bg-[#0e0e0e]/80 border border-border dark:border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/15 transition-all text-foreground"
                         required
                       />
                     </div>
@@ -153,7 +153,7 @@ export const ContactSection = () => {
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
                           focusedField === "email" || formData.email
-                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            ? "text-xs text-primary -top-2.5 bg-background px-2"
                             : "text-muted-foreground top-4"
                         }`}
                       >
@@ -165,7 +165,7 @@ export const ContactSection = () => {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
-                        className="w-full h-14 bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all"
+                        className="w-full h-14 bg-background/50 dark:bg-[#0e0e0e]/80 border border-border dark:border-zinc-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/15 transition-all text-foreground"
                         required
                       />
                     </div>
@@ -175,7 +175,7 @@ export const ContactSection = () => {
                       <motion.label
                         className={`absolute left-4 transition-all duration-200 pointer-events-none z-10 ${
                           focusedField === "message" || formData.message
-                            ? "text-xs text-[#60A5FA] -top-2.5 bg-[#050505] px-2"
+                            ? "text-xs text-primary -top-2.5 bg-background px-2"
                             : "text-muted-foreground top-4"
                         }`}
                       >
@@ -187,7 +187,7 @@ export const ContactSection = () => {
                         onFocus={() => setFocusedField("message")}
                         onBlur={() => setFocusedField(null)}
                         rows={4}
-                        className="w-full bg-[#0e0e0e]/80 border border-zinc-800 rounded-xl px-5 py-[18px] focus:outline-none focus:border-[#3B82F6] focus:ring-4 focus:ring-[#3B82F6]/15 transition-all resize-none"
+                        className="w-full bg-background/50 dark:bg-[#0e0e0e]/80 border border-border dark:border-zinc-800 rounded-xl px-5 py-[18px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/15 transition-all text-foreground resize-none"
                         required
                       />
                     </div>
