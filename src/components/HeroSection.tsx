@@ -193,29 +193,40 @@ export const HeroSection = () => {
               Artificial Intelligence, Machine Learning, and Cybersecurity research.
             </motion.p>
  
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Button
-                variant="hero"
-                onClick={() => scrollToSection("#projects")}
-                className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 group"
-              >
-                View Projects <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </Button>
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.4 }}
+               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+             >
+               <Button
+                 variant="hero"
+                 onClick={() => scrollToSection("#projects")}
+                 className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 group"
+               >
+                 View Projects <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+               </Button>
  
-              <Button
-                variant="heroOutline"
-                onClick={() => scrollToSection("#contact")}
-                className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 hover:bg-primary/20 hover:text-blue-400"
-              >
-                <Mail className="w-5 h-5" />
-                Contact Me
-              </Button>
-            </motion.div>
+               <Button
+                 asChild
+                 variant="heroOutline"
+                 className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 hover:bg-primary/20 hover:text-blue-400 cursor-pointer sm:hidden"
+               >
+                 <a href="/Kavindu_Peiris_CV.pdf" download>
+                   <Download className="w-5 h-5" />
+                   Download CV
+                 </a>
+               </Button>
+
+               <Button
+                 variant="heroOutline"
+                 onClick={() => scrollToSection("#contact")}
+                 className="h-13 md:h-14 px-8 md:px-10 text-base md:text-lg rounded-xl gap-2 hover:bg-primary/20 hover:text-blue-400"
+               >
+                 <Mail className="w-5 h-5" />
+                 Contact Me
+               </Button>
+             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}
