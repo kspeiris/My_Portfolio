@@ -378,6 +378,96 @@ const projects: Project[] = [
     videoUrl: "https://youtu.be/CF2mofQ7T7A?si=lW19uznOpF4gx5Ml",
   },
   {
+    title: "Bio Care Company Website",
+
+    description:
+      "Modern corporate website and product inquiry platform built with React 18, Vite, Tailwind CSS, React Router, and Lucide React for showcasing functional beverages, managing product catalogs, and handling customer and business inquiries.",
+
+    summary:
+      "A responsive single-page corporate website developed for Bio Care, a Sri Lankan functional beverage manufacturer. The platform provides a professional digital presence with company information, product showcases, certification highlights, inquiry management, and contact services through a modern React-based architecture featuring reusable components, responsive UI, and optimized user experience.",
+
+    details: [
+      "Designed and developed a complete corporate website that showcases the company's products, brand identity, certifications, production capacity, business milestones, and company information while providing an engaging user experience through modern responsive design and reusable React components.",
+
+      "Implemented a fully responsive React SPA featuring dynamic product catalogs, product detail modals, company overview pages, certification showcase, contact management, and dedicated inquiry workflows for customers, distributors, business partners, and bulk order requests using React Router, Tailwind CSS, and reusable UI components.",
+
+      "Built using React 18, Vite, Tailwind CSS, React Router DOM, and Lucide React with component-based architecture, responsive layouts, optimized performance, interactive product browsing, modern UI/UX, clean code organization, and scalable frontend architecture suitable for enterprise business websites."
+    ],
+
+    features: [
+      "Responsive Corporate Website",
+      "Modern Landing Page",
+      "Company Profile",
+      "About Us Page",
+      "Product Catalog",
+      "Product Detail Modal",
+      "Featured Products",
+      "Product Categories",
+      "Certification Showcase",
+      "Company Statistics",
+      "Business Milestones",
+      "Production Capacity Display",
+      "Bulk Order Inquiry",
+      "Business Partnership Inquiry",
+      "Distributor Inquiry",
+      "Product Inquiry Form",
+      "General Contact Form",
+      "Contact Information",
+      "Business Hours",
+      "Responsive Navigation",
+      "SPA Routing",
+      "Interactive UI Components",
+      "Reusable Component Architecture",
+      "Tailwind CSS Design System",
+      "Mobile Responsive Layout",
+      "Modern UI/UX"
+    ],
+
+    technologies: [
+      "React 18",
+      "JavaScript",
+      "Vite",
+      "React Router DOM",
+      "Tailwind CSS",
+      "Lucide React",
+      "HTML5",
+      "CSS3",
+      "JSX",
+      "Responsive Design",
+      "Component-Based Architecture",
+      "SPA Architecture",
+      "Git",
+      "GitHub",
+      "Netlify"
+    ],
+
+    image: projectbio,
+
+    tags: [
+      "React",
+      "Corporate Website",
+      "Company Website",
+      "Business Website",
+      "Product Catalog",
+      "React SPA",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Responsive Design",
+      "Frontend Development",
+      "UI/UX",
+      "Product Showcase",
+      "Inquiry Management",
+      "Modern Web Design",
+      "Netlify"
+    ],
+
+    githubUrl: "https://github.com/kspeiris/biocare-web",
+
+    videoUrl: "https://youtu.be/DnL_yyfsaOo?si=d-2of5gKMbNbVBmp",
+    isFreelance: true,
+  },
+  {
     title: "Cyber Threat Intelligence Pipeline",
     description:
       "Automated Cyber Threat Intelligence Platform powered by n8n Workflow Automation.",
@@ -1576,96 +1666,7 @@ const projects: Project[] = [
 
     videoUrl: "https://youtu.be/E226Drb6tWQ?si=Ijur9qMN8aHUyJdn",
   },
-  {
-    title: "Bio Care Company Website",
 
-    description:
-      "Modern corporate website and product inquiry platform built with React 18, Vite, Tailwind CSS, React Router, and Lucide React for showcasing functional beverages, managing product catalogs, and handling customer and business inquiries.",
-
-    summary:
-      "A responsive single-page corporate website developed for Bio Care, a Sri Lankan functional beverage manufacturer. The platform provides a professional digital presence with company information, product showcases, certification highlights, inquiry management, and contact services through a modern React-based architecture featuring reusable components, responsive UI, and optimized user experience.",
-
-    details: [
-      "Designed and developed a complete corporate website that showcases the company's products, brand identity, certifications, production capacity, business milestones, and company information while providing an engaging user experience through modern responsive design and reusable React components.",
-
-      "Implemented a fully responsive React SPA featuring dynamic product catalogs, product detail modals, company overview pages, certification showcase, contact management, and dedicated inquiry workflows for customers, distributors, business partners, and bulk order requests using React Router, Tailwind CSS, and reusable UI components.",
-
-      "Built using React 18, Vite, Tailwind CSS, React Router DOM, and Lucide React with component-based architecture, responsive layouts, optimized performance, interactive product browsing, modern UI/UX, clean code organization, and scalable frontend architecture suitable for enterprise business websites."
-    ],
-
-    features: [
-      "Responsive Corporate Website",
-      "Modern Landing Page",
-      "Company Profile",
-      "About Us Page",
-      "Product Catalog",
-      "Product Detail Modal",
-      "Featured Products",
-      "Product Categories",
-      "Certification Showcase",
-      "Company Statistics",
-      "Business Milestones",
-      "Production Capacity Display",
-      "Bulk Order Inquiry",
-      "Business Partnership Inquiry",
-      "Distributor Inquiry",
-      "Product Inquiry Form",
-      "General Contact Form",
-      "Contact Information",
-      "Business Hours",
-      "Responsive Navigation",
-      "SPA Routing",
-      "Interactive UI Components",
-      "Reusable Component Architecture",
-      "Tailwind CSS Design System",
-      "Mobile Responsive Layout",
-      "Modern UI/UX"
-    ],
-
-    technologies: [
-      "React 18",
-      "JavaScript",
-      "Vite",
-      "React Router DOM",
-      "Tailwind CSS",
-      "Lucide React",
-      "HTML5",
-      "CSS3",
-      "JSX",
-      "Responsive Design",
-      "Component-Based Architecture",
-      "SPA Architecture",
-      "Git",
-      "GitHub",
-      "Netlify"
-    ],
-
-    image: projectbio,
-
-    tags: [
-      "React",
-      "Corporate Website",
-      "Company Website",
-      "Business Website",
-      "Product Catalog",
-      "React SPA",
-      "Vite",
-      "Tailwind CSS",
-      "React Router",
-      "Responsive Design",
-      "Frontend Development",
-      "UI/UX",
-      "Product Showcase",
-      "Inquiry Management",
-      "Modern Web Design",
-      "Netlify"
-    ],
-
-    githubUrl: "https://github.com/kspeiris/biocare-web",
-
-    videoUrl: "https://youtu.be/DnL_yyfsaOo?si=d-2of5gKMbNbVBmp",
-    isFreelance: true,
-  },
   {
     title: "Developer Behavior Analytics Tool (DBAT)",
 
