@@ -135,7 +135,7 @@ export const BlogsSection = () => {
           className="text-center mt-12"
         >
           <Button variant="heroOutline" size="lg" asChild>
-            <a href="https://medium.com/@kavindup52" target="_blank" rel="noopener noreferrer">
+            <a href="https://kspeiris.medium.com" target="_blank" rel="noopener noreferrer">
               View All Articles
             </a>
           </Button>

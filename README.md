@@ -133,5 +133,5 @@ Feel free to reach out to me for project collaborations, research, or career opp
 - **📧 Email:** kavindup52@gmail.com
 - **💼 LinkedIn:** [Kavindu Peiris](https://www.linkedin.com/in/kavindu-peiris-149375297)
 - **🐙 GitHub:** [@kspeiris](https://github.com/kspeiris)
-- **✍️ Medium:** [@kavindup52](https://medium.com/@kavindup52)
+- **✍️ Medium:** [@kspeiris](https://kspeiris.medium.com)
 - **🎥 YouTube:** [@kspeiris](https://youtube.com/@kspeiris?si=BO6K4BxcRpBuO_fC)
